@@ -1,0 +1,335 @@
+,name
+0,Aboleth
+1,Acolyte
+2,Adult Black Dragon
+3,Adult Blue Dragon
+4,Adult Brass Dragon
+5,Adult Bronze Dragon
+6,Adult Copper Dragon
+7,Adult Gold Dragon
+8,Adult Green Dragon
+9,Adult Red Dragon
+10,Adult Silver Dragon
+11,Adult White Dragon
+12,Air Elemental
+13,Ancient Black Dragon
+14,Ancient Blue Dragon
+15,Ancient Brass Dragon
+16,Ancient Bronze Dragon
+17,Ancient Copper Dragon
+18,Ancient Gold Dragon
+19,Ancient Green Dragon
+20,Ancient Red Dragon
+21,Ancient Silver Dragon
+22,Ancient White Dragon
+23,Androsphinx
+24,Animated Armor
+25,Ankheg
+26,Ape
+27,Archmage
+28,Assassin
+29,Awakened Shrub
+30,Awakened Tree
+31,Axe Beak
+32,Azer
+33,Baboon
+34,Badger
+35,Balor
+36,Bandit
+37,Bandit Captain
+38,Barbed Devil
+39,Basilisk
+40,Bat
+41,Bearded Devil
+42,Behir
+43,Berserker
+44,Black Bear
+45,Black Dragon Wyrmling
+46,Black Pudding
+47,Blink Dog
+48,Blood Hawk
+49,Blue Dragon Wyrmling
+50,Boar
+51,Bone Devil
+52,Brass Dragon Wyrmling
+53,Bronze Dragon Wyrmling
+54,Brown Bear
+55,Bugbear
+56,Bulette
+57,Camel
+58,Cat
+59,Centaur
+60,Chain Devil
+61,Chimera
+62,Chuul
+63,Clay Golem
+64,Cloaker
+65,Cloud Giant
+66,Cockatrice
+67,Commoner
+68,Constrictor Snake
+69,Copper Dragon Wyrmling
+70,Couatl
+71,Crab
+72,Crocodile
+73,Cult Fanatic
+74,Cultist
+75,Darkmantle
+76,Death Dog
+77,Deep Gnome (Svirfneblin)
+78,Deer
+79,Deva
+80,Dire Wolf
+81,Djinni
+82,Doppelganger
+83,Draft Horse
+84,Dragon Turtle
+85,Dretch
+86,Drider
+87,Drow
+88,Druid
+89,Dryad
+90,Duergar
+91,Dust Mephit
+92,Eagle
+93,Earth Elemental
+94,Efreeti
+95,Elephant
+96,Elk
+97,Erinyes
+98,Ettercap
+99,Ettin
+100,Fire Elemental
+101,Fire Giant
+102,Flesh Golem
+103,Flying Snake
+104,Flying Sword
+105,Frog
+106,Frost Giant
+107,Gargoyle
+108,Gelatinous Cube
+109,Ghast
+110,Ghost
+111,Ghoul
+112,Giant Ape
+113,Giant Badger
+114,Giant Bat
+115,Giant Boar
+116,Giant Centipede
+117,Giant Constrictor Snake
+118,Giant Crab
+119,Giant Crocodile
+120,Giant Eagle
+121,Giant Elk
+122,Giant Fire Beetle
+123,Giant Frog
+124,Giant Goat
+125,Giant Hyena
+126,Giant Lizard
+127,Giant Octopus
+128,Giant Owl
+129,Giant Poisonous Snake
+130,Giant Rat
+131,Giant Rat (Diseased)
+132,Giant Scorpion
+133,Giant Sea Horse
+134,Giant Shark
+135,Giant Spider
+136,Giant Toad
+137,Giant Vulture
+138,Giant Wasp
+139,Giant Weasel
+140,Giant Wolf Spider
+141,Gibbering Mouther
+142,Glabrezu
+143,Gladiator
+144,Gnoll
+145,Goat
+146,Goblin
+147,Gold Dragon Wyrmling
+148,Gorgon
+149,Gray Ooze
+150,Green Dragon Wyrmling
+151,Green Hag
+152,Grick
+153,Griffon
+154,Grimlock
+155,Guard
+156,Guardian Naga
+157,Gynosphinx
+158,Half-Red Dragon Veteran
+159,Harpy
+160,Hawk
+161,Hell Hound
+162,Hezrou
+163,Hill Giant
+164,Hippogriff
+165,Hobgoblin
+166,Homunculus
+167,Horned Devil
+168,Hunter Shark
+169,Hydra
+170,Hyena
+171,Ice Devil
+172,Ice Mephit
+173,Imp
+174,Invisible Stalker
+175,Iron Golem
+176,Jackal
+177,Killer Whale
+178,Knight
+179,Kobold
+180,Kraken
+181,Lamia
+182,Lemure
+183,Lich
+184,Lion
+185,Lizard
+186,Lizardfolk
+187,Mage
+188,Magma Mephit
+189,Magmin
+190,Mammoth
+191,Manticore
+192,Marilith
+193,Mastiff
+194,Medusa
+195,Merfolk
+196,Merrow
+197,Mimic
+198,Minotaur
+199,Minotaur Skeleton
+200,Mule
+201,Mummy
+202,Mummy Lord
+203,Nalfeshnee
+204,Night Hag
+205,Nightmare
+206,Noble
+207,Ochre Jelly
+208,Octopus
+209,Ogre
+210,Ogre Zombie
+211,Oni
+212,Orc
+213,Otyugh
+214,Owl
+215,Owlbear
+216,Panther
+217,Pegasus
+218,Phase Spider
+219,Pit Fiend
+220,Planetar
+221,Plesiosaurus
+222,Poisonous Snake
+223,Polar Bear
+224,Pony
+225,Priest
+226,Pseudodragon
+227,Purple Worm
+228,Quasit
+229,Quipper
+230,Rakshasa
+231,Rat
+232,Raven
+233,Red Dragon Wyrmling
+234,Reef Shark
+235,Remorhaz
+236,Rhinoceros
+237,Riding Horse
+238,Roc
+239,Roper
+240,Rug of Smothering
+241,Rust Monster
+242,Saber-Toothed Tiger
+243,Sahuagin
+244,Salamander
+245,Satyr
+246,Scorpion
+247,Scout
+248,Sea Hag
+249,Sea Horse
+250,Shadow
+251,Shambling Mound
+252,Shield Guardian
+253,Shrieker
+254,Silver Dragon Wyrmling
+255,Skeleton
+256,Solar
+257,Specter
+258,Spider
+259,Spirit Naga
+260,Sprite
+261,Spy
+262,Steam Mephit
+263,Stirge
+264,Stone Giant
+265,Stone Golem
+266,Storm Giant
+267,Succubus/Incubus
+268,Swarm of Bats
+269,Swarm of Beetles
+270,Swarm of Centipedes
+271,Swarm of Insects
+272,Swarm of Poisonous Snakes
+273,Swarm of Quippers
+274,Swarm of Rats
+275,Swarm of Ravens
+276,Swarm of Spiders
+277,Swarm of Wasps
+278,Tarrasque
+279,Thug
+280,Tiger
+281,Treant
+282,Tribal Warrior
+283,Triceratops
+284,Troll
+285,Tyrannosaurus Rex
+286,Unicorn
+287,"Vampire, Bat Form"
+288,"Vampire, Mist Form"
+289,Vampire Spawn
+290,"Vampire, Vampire Form"
+291,Veteran
+292,Violet Fungus
+293,Vrock
+294,Vulture
+295,Warhorse
+296,Warhorse Skeleton
+297,Water Elemental
+298,Weasel
+299,"Werebear, Bear Form"
+300,"Werebear, Human Form"
+301,"Werebear, Hybrid Form"
+302,"Wereboar, Boar Form"
+303,"Wereboar, Human Form"
+304,"Wereboar, Hybrid Form"
+305,"Wererat, Human Form"
+306,"Wererat, Hybrid Form"
+307,"Wererat, Rat Form"
+308,"Weretiger, Human Form"
+309,"Weretiger, Hybrid Form"
+310,"Weretiger, Tiger Form"
+311,"Werewolf, Human Form"
+312,"Werewolf, Hybrid Form"
+313,"Werewolf, Wolf Form"
+314,White Dragon Wyrmling
+315,Wight
+316,Will-o'-Wisp
+317,Winter Wolf
+318,Wolf
+319,Worg
+320,Wraith
+321,Wyvern
+322,Xorn
+323,Young Black Dragon
+324,Young Blue Dragon
+325,Young Brass Dragon
+326,Young Bronze Dragon
+327,Young Copper Dragon
+328,Young Gold Dragon
+329,Young Green Dragon
+330,Young Red Dragon
+331,Young Silver Dragon
+332,Young White Dragon
+333,Zombie
