@@ -28,4 +28,4 @@ while acao_jogador != 'sair do jogo':
         syntheris.mensagem(f'Veridex: {resposta_veridex}')
 
     else:
-        prompt_syntheris = syntheris.mensagem("lembre-se da ordem de atuação, primeiro voce responde somente somente com o número da IA que quer coordenar, depois que receber a mensagem 'O que você deseja que a {IA} faça:' Voce escreve o prompt com as informações")
+        prompt_syntheris = syntheris.mensagem("lembre-se da ordem de atuação, primeiro voce responde somente somente com o número da IA que quer coordenar, depois que receber a mensagem 'O que você deseja que a IA faça:' Voce escreve o prompt com as informações")
