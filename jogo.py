@@ -1,4 +1,26 @@
-from mestre import Syntheris, Lorealis, Naratheon, Veridex
+from mestre import Mestre
+
+print('Adventure of Rusty Axe Tavern')
+print('Bem Vindo jogador')
+print('Escolha o se personagem')
+print('Borin o Bárbaro')
+
+
+
+mestre = Mestre()
+mensagem = mestre.mensagem('Começar Aventura')
+print(mensagem)
+continuar = True
+
+while continuar != False:
+    acao = input('')
+    mensagem = mestre.mensagem(acao)
+    print(mensagem)
+
+
+
+
+'''from mestre import Syntheris, Lorealis, Naratheon, Veridex
 
 
 syntheris = Syntheris()
@@ -28,4 +50,4 @@ while acao_jogador != 'sair do jogo':
         syntheris.mensagem(f'Veridex: {resposta_veridex}')
 
     else:
-        prompt_syntheris = syntheris.mensagem("lembre-se da ordem de atuação, primeiro voce responde somente somente com o número da IA que quer coordenar, depois que receber a mensagem 'O que você deseja que a IA faça:' Voce escreve o prompt com as informações")
+        prompt_syntheris = syntheris.mensagem("lembre-se da ordem de atuação, primeiro voce responde somente somente com o número da IA que quer coordenar, depois que receber a mensagem 'O que você deseja que a IA faça:' Voce escreve o prompt com as informações")'''
