@@ -1,5 +1,51 @@
 import random
 
+class Habilidades_Resistencias:
+    def __init__(self, forca, destreza, constituicao, inteligencia, sabedoria, carisma):
+        self.forca = forca
+        self.destreza = destreza
+        self.constituicao = constituicao
+        self.inteligencia = inteligencia
+        self.sabedoria = sabedoria
+        self.carisma = carisma
+
+    def __str__(self):
+        info = f'Força: {self.forca}'
+        info = f'Destreza: {self.destreza}'
+        info = f'Constituição: {self.constituicao}'
+        info = f'Inteligência: {self.inteligencia}'
+        info = f'Sabedoria: {self.sabedoria}'
+        info = f'Carisma: {self.carisma}'
+        return info
+
+class Equipamentos:
+    def __init__(self, armas=None, pacotes=None):
+        self.armas = armas if armas else []
+        self.pacotes = pacotes if pacotes else []
+
+class Pericias:
+    def __init__(self, acrobacia, adestrar_animais, arcanismo, atletismo, atuacao, enganacao, furtividade, historia, intimidacao, intuicao, investigacao, medicina, natureza, percepcao, persuasao, prestidigitacao, religiao, sobrevivencia):
+        self.acrobacia = acrobacia
+        self.adestrar_aniamis = adestrar_animais
+        self.arcanismo = arcanismo
+        self.atletismo = atletismo
+        self.atuacao = atuacao
+        self.enganacao = enganacao
+        self.furitividade = furtividade
+        self.historia = historia
+        self.intimidacao = intimidacao
+        self.intuicao = intuicao
+        self.investgacao = investigacao
+        self.medicina = medicina
+        self.natureza = natureza
+        self.percepcao = percepcao
+        self.persuasao = persuasao
+        self.prestidigitacao = prestidigitacao
+        self.religiao = religiao
+        self.sobrevivencia = sobrevivencia
+
+
+
 class Personagem:
     def __init__(self, nome, classe, nivel, raca, antecedente, tendencia, habilidades, bonus_proef, armadura, iniciativa,
                  deslocamento, vida, resistencias, percepcao, pericias, idiomas, proeficiencias, equipamentos, altura, 
@@ -17,7 +63,7 @@ class Personagem:
         self.deslocamento = deslocamento
         self.vida = vida
         self.resistencias = resistencias
-        self.percepcao = percepcao
+        self.percepcao_passiva = percepcao
         self.pericias = pericias
         self.idiomas = idiomas
         self.proeficiencias = proeficiencias
@@ -33,6 +79,10 @@ class Personagem:
 
 class Barbaro(Personagem):
     def __init__(self):
+        self.habilidades = Habilidades_Resistencias(forca=15, destreza=10, constituicao=14, inteligencia=8, sabedoria=12, carisma=13)
+        self.resistencias = Habilidades_Resistencias(forca=2, destreza=0, constituicao=2, inteligencia=0, sabedoria=0, carisma=0)
+        self.equipamentos = Equipamentos(armas=['machado de batalha', 'machadinhas de arremesso', 'ferramentas de ferreiro'], pacotes=['pacote de explorador'])
+        self.pericias = Pericias(acrobacia=0, adestrar_animais=3, arcanismo=0, atletismo=5, atuacao=0, enganacao=0, furtividade=0, historia=0, intimidacao=0, intuicao=0,investigacao=0,medicina=0,natureza=0,percepcao=3, persuasao=0,prestidigitacao=0,religiao=0,sobrevivencia=3)
         super().__init__(
             nome='Borin Pedra-Rachada',
             classe='Bárbaro',
@@ -40,39 +90,14 @@ class Barbaro(Personagem):
             raca='Anão da Montanha',
             antecedente='Forasteiro',
             tendencia='Caótico Bom',
-            habilidades={
-                'forca': 15,
-                'destreza': 10,
-                'constituicao': 14,
-                'inteligencia': 8,
-                'sabedoria': 12,
-                'carisma': 13
-            },
             bonus_proef=2,
             armadura=16,
             iniciativa=2,
             deslocamento=7.5,
             vida=15,
-            resistencias={
-                'força': 5,
-                'constituicao': 5
-            },
-            percepcao=11,
-            pericias={
-                'atletismo': 5,
-                'sobrevivencia': 3,
-                'percepcao': 3,
-                'adestrar_animais': 3
-            },
+            percepcao_passiva=11,
             idiomas=['comum', 'anão', 'gigante'],
             proeficiencias=['ferramentas de ferreiro', 'instrumentos musicais de percussão'],
-            equipamentos={
-                'machado de batalha': 1,
-                'machadinhas de arremesso': 2,
-                'pacote de explorador': 1,
-                'ferramentas de ferreiro': 1,
-                'tambor': 1
-            },
             altura=1.39,
             peso=72,
             aliados={
@@ -109,13 +134,7 @@ class Barbaro(Personagem):
         Raça: {self.raca}
         Antecedente: {self.antecedente}
         Tendência: {self.tendencia}
-        Habilidades: 
-        Força: {self.habilidades['força']}
-        Destreza: {self.habilidades['destreza']}
-        Constituição: {self.habilidades['constituicao']}
-        Inteligência: {self.habilidades['inteligencia']}
-        Sabedoria: {self.habilidades['sabedoria']}
-        Carisma: {self.habilidades['carisma']}
+        Habilidades: {self.habilidades}
         Bonus de Proeficiência: +{self.bonus_proef}
         Armadura: {self.armadura}
         Vida: {self.vida}
