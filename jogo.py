@@ -17,7 +17,36 @@ while continuar != False:
     mensagem = mestre.mensagem(acao)
     print(mensagem)
 
-
+def combate(jogador, inimigo):
+    contador = 0
+    print('Combate')
+    while True:
+        contador += 1
+        print(f'Rodada: {contador}')
+        print(f'{inimigo.nome}  nivel {inimigo.nivel}')
+        print(inimigo.status)
+        print('1. Atacar')
+        print('2. Mochila')
+        print('3. Conversar')
+        print('4. Fugir')
+        escolha = input('')
+        if escolha == 1:
+            acao = input('Descreva seu ataque:')
+            #enviar para o mestre [...]
+        elif escolha == 2:
+            cont = 0
+            for item in jogador.inventario:
+                cont += 1
+                print(f'{cont}. {item.nome}')
+            acao = input('Qual item voce deseja usar: ')
+            #enviar para o mestre [...]
+        elif escolha == 3:
+            acao = input(f'({jogador.nome}):')
+            #enviar para o mestre [...]
+        elif escolha == 4:
+            #Narracaod o mestre da tentativa de fuga [...]
+        else:
+            #enviar para o mestre que o jogador nao fez nada
 
 
 '''from mestre import Syntheris, Lorealis, Naratheon, Veridex

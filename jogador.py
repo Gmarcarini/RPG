@@ -1,22 +1,6 @@
 import random
 
-class Habilidades_Resistencias:
-    def __init__(self, forca, destreza, constituicao, inteligencia, sabedoria, carisma):
-        self.forca = forca
-        self.destreza = destreza
-        self.constituicao = constituicao
-        self.inteligencia = inteligencia
-        self.sabedoria = sabedoria
-        self.carisma = carisma
 
-    def __str__(self):
-        info = f'Força: {self.forca}'
-        info = f'Destreza: {self.destreza}'
-        info = f'Constituição: {self.constituicao}'
-        info = f'Inteligência: {self.inteligencia}'
-        info = f'Sabedoria: {self.sabedoria}'
-        info = f'Carisma: {self.carisma}'
-        return info
 
 class Equipamentos:
     def __init__(self, armas=None, pacotes=None):
@@ -79,8 +63,8 @@ class Personagem:
 
 class Barbaro(Personagem):
     def __init__(self):
-        self.habilidades = Habilidades_Resistencias(forca=15, destreza=10, constituicao=14, inteligencia=8, sabedoria=12, carisma=13)
-        self.resistencias = Habilidades_Resistencias(forca=2, destreza=0, constituicao=2, inteligencia=0, sabedoria=0, carisma=0)
+        self.habilidades = '''Habilidades_Resistencias(forca=15, destreza=10, constituicao=14, inteligencia=8, sabedoria=12, carisma=13)'''
+        self.resistencias = '''Habilidades_Resistencias(forca=2, destreza=0, constituicao=2, inteligencia=0, sabedoria=0, carisma=0)'''
         self.equipamentos = Equipamentos(armas=['machado de batalha', 'machadinhas de arremesso', 'ferramentas de ferreiro'], pacotes=['pacote de explorador'])
         self.pericias = Pericias(acrobacia=0, adestrar_animais=3, arcanismo=0, atletismo=5, atuacao=0, enganacao=0, furtividade=0, historia=0, intimidacao=0, intuicao=0,investigacao=0,medicina=0,natureza=0,percepcao=3, persuasao=0,prestidigitacao=0,religiao=0,sobrevivencia=3)
         super().__init__(
