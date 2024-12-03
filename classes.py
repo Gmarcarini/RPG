@@ -137,7 +137,6 @@ class Bardo(Classes):
         self.pericias['persuasao']+= self.bonus_proef
         self.pericias['atuacao'] += self.bonus_proef
         self.pericias['enganacao'] += self.bonus_proef
-        self.bonus_proef = 0
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
             'espada longa': 1,
@@ -165,8 +164,6 @@ class Ladino(Classes):
         self.pericias['acrobacia'] += self.bonus_proef
         self.pericias['furtividade'] += self.bonus_proef
         self.pericias['intuicao'] += self.bonus_proef
-        self.experiencia = 0
-        self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
             'rapieira': 1,
@@ -190,8 +187,6 @@ class Mago(Classes):
         self.proef = [ 'adagas', 'dardos', 'fundas', 'bastões', 'bestas leves']
         self.pericias['arcanismo'] += self.bonus_proef
         self.pericias['historia'] += self.bonus_proef
-        self.experiencia = 0
-        self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
             'grimório': 1,
@@ -217,8 +212,6 @@ class Paladino(Classes):
         self.proef = ['todas as armaduras' , 'escudos', 'armas simples', 'armas marciais' ]
         self.pericias['intuicao'] += self.bonus_proef
         self.pericias['medicina'] += self.bonus_proef
-        self.experiencia = 0
-        self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
             'espada longa': 1,
@@ -250,3 +243,5 @@ mago = Mago('Mago', hab_mago)
 
 hab_paladino = Habilidades(15, 12, 13, 10, 8 ,14)
 paladino = Paladino('Paladino', hab_paladino)
+
+print(bardo.bonus_proef)

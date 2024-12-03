@@ -1,5 +1,5 @@
 from mestre import Mestre
-from jogador import borin
+from jogador import borin, elara, pipkin, zaltarian, kael
 import time
 import os
 import keyboard
@@ -10,6 +10,7 @@ mestre = Mestre()
 
 def selecao_personagem():
     "Menu de escolha dos personagens do jogo"
+
     options = ['Borin o Bárbaro', 'Elara a Barda', 'Pipkin o Ladino', 'Zaltarian a Maga', 'Kael o Paladino']
     current_option = 0
     while True: 
@@ -178,8 +179,6 @@ elif escolha == 1:
 elif escolha == 2:
     print('Até mais jogador!')
     exit
-
-#A partir daqui a aventura deve começar (enviar o prompt "Começar aventura para o mestre")
 
 
 def combate(jogador, inimigo):
