@@ -1,5 +1,5 @@
 import random
-from habilidades import Habilidades
+from classes import barbaro, bardo, mago, ladino, paladino
 
 class AnaoMontanha:
     def __init__(self, classe):
@@ -16,6 +16,7 @@ class AnaoMontanha:
         self.caract_raca = {
             'Visão no escuro': 'enxerga na penumbra a até 18 metros como se fosse luz plena, e no escuro como se fosse na penumbra.'
             }
+        self.classe = classe
 
 class AnaoColina:
     def __init__(self, classe):
@@ -33,6 +34,7 @@ class AnaoColina:
         self.caract_raca = {
             'Visão no escuro': 'enxerga na penumbra a até 18 metros como se fosse luz plena, e no escuro como se fosse na penumbra.'
             }
+        self.classe = classe
 
 class AltoElfo:
     def __init__(self, classe):
@@ -52,7 +54,7 @@ class AltoElfo:
             }
         self.proef = ['espadas longas', 'espadas curtas', 'arcos longos', 'arcos curtos']
         self.truques = []
-
+        self.classe = classe
 
 
 class ElfoFloresta:
@@ -73,6 +75,7 @@ class ElfoFloresta:
             'Mascara da natureza': 'Voce pode tentar se esconder mesmo quando esta apenas levemente obscurecido'
             }
         self.proef = ['espadas longas', 'espadas curtas', 'arcos longos', 'arcos curtos']
+        self.classe = classe
 
 class ElfoNegro:
     def __init__(self, classe):
@@ -93,6 +96,7 @@ class ElfoNegro:
             'Sensibilidade a luz solar': 'Voce possui desvantagem em testes de percepcao se o alvo esta sob luz solar direta'
             }
         self.proef = ['rapieiras', 'espadas curtas', 'bestas de mao']
+        self.classe = classe
 
 class HalflingPesLeves:
     def __init__(self, classe):
@@ -109,6 +113,7 @@ class HalflingPesLeves:
             'Agilidade Halfling': 'Voce pode se mover atraves do espaço de qualquer criatura que for de um tamanho maior que o seu',
             'Furtividade Natural': 'Voce pode tentar se esconder mesmo quando possuir apenas uma cobertura de uma criatura que for no minimo um tamanho maior que o seu',
             }
+        self.classe = classe
 
 class HalflingRobusto:
     def __init__(self, classe):
@@ -125,7 +130,7 @@ class HalflingRobusto:
             'Bravura': 'Voce tem vantagem em testes de resistencia contra ficar amedrontado',
             'Agilidade Halfling': 'Voce pode se mover atraves do espaço de qualquer criatura que for de um tamanho maior que o seu',
             }
-
+        self.classe = classe
 
 class Humano:
     def __init__(self, classe):
@@ -142,7 +147,7 @@ class Humano:
         self.habilidades.sabedoria += 1
         self.habilidades.carisma += 1
         self.deslocamento = 9  
-
+        self.classe = classe
 
 class Draconato:
     def __init__(self, classe):
@@ -171,6 +176,7 @@ class Draconato:
             if i == d10:
                 self.ancestral = {chave: valor}
                 break
+        self.classe = classe
 
 class GnomoFloresta:
     def __init__(self, classe):
@@ -187,6 +193,7 @@ class GnomoFloresta:
             'Falar com bestas pequenas': 'atraves de sons e gestos voce consegue comunicar ideias simples para bestas pequenas ou menores'
             }
         self.truques = ['ilusao pequena']
+        self.classe = classe
 
 class GnomoRochas:
     def __init__(self, classe):
@@ -205,6 +212,7 @@ class GnomoRochas:
             }
         self.truques = ['ilusao pequena']
         self.proef = ['ferramentas de artesao']
+        self.classe = classe
 
 class MeioElfo:
     def __init__(self, classe):
@@ -221,6 +229,7 @@ class MeioElfo:
         self.caract_raca = {
             'Visão no escuro': 'enxerga na penumbra a até 18 metros como se fosse luz plena, e no escuro como se fosse na penumbra.',
             }
+        self.classe = classe
 
 class MeioOrc:
     def __init__(self, classe):
@@ -238,6 +247,7 @@ class MeioOrc:
             'Ataques selvagens': 'Quando atingir um ataque critico com uma arma corpo a corpo, voce rola mais um dado de dano da arma para dar dano extra'
             }
         self.proef = ['intimidacao']
+        self.classe = classe
 
 class Tieflings:
     def __init__(self, classe):
@@ -254,9 +264,11 @@ class Tieflings:
             'Visão no escuro': 'enxerga na penumbra a até 18 metros como se fosse luz plena, e no escuro como se fosse na penumbra.',
             }
         self.truques = ['traumaturgia']
+        self.classe = classe
 
-anao_montanha = AnaoMontanha()
-
+anao_montanha = AnaoMontanha(barbaro)
+meio_elfo = MeioElfo(bardo)
+gnomo_floresta = GnomoFloresta(ladino)
 
 
 
