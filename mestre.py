@@ -47,7 +47,6 @@ class Mestre:
                     "parts": [
                         "Aqui esta os npcs presentes no Machado Enferrujado",
                         self.files[0],
-                        "ficha do personagem do jogador\n\nNome do Personagem: Anya Stormborn\nClasse e Nível: Bárbaro 1\nRaça: Humana Variante\nAntecedente: Herói do Povo\nTendência: Caótica Boa\n\nHabilidades:\n\nForça: 16 (+3)\n\nDestreza: 13 (+1)\n\nConstituição: 14 (+2)\n\nInteligência: 10 (+0)\n\nSabedoria: 12 (+1)\n\nCarisma: 15 (+2) - Incomum para um bárbaro, reflete sua capacidade de inspirar outros.\n\nInspiração: (em branco)\nBônus de Proficiência: +2\nClasse de Armadura: 14 (10 + DES + escudo) - Anya começa com um escudo, mas pode optar por uma armadura mais pesada se adquiri-la.\nIniciativa: +1 (DES)\nDeslocamento: 9m\nPontos de Vida Atuais/Máximo: 14 (12 + CON) Anote 1d12 como dado de vida\nPontos de Vida Temporários: 0\nPontos de Experiência: 0\nDado de Vida: 1d12\nTestes de Resistência: Força +5 (PROF +3 FOR), Constituição +4 (PROF +2 CON)\nSabedoria (Percepção) Passiva: 11\n\nPerícias:\n\nAtletismo +5 (PROF +3 FOR)\n\nSobrevivência +3 (PROF +1 SAB)\n\nPercepção +3 (PROF +1 SAB)\n\nPersuasão +4 (PROF +2 CAR) - Perícia incomum para um bárbaro, demonstra sua capacidade de inspirar outros com palavras, além de sua força bruta.\n\nOutras Proficiências e Idiomas:\n\nIdiomas: Comum e um idioma à sua escolha. Vamos supor que ela tenha aprendido Gigante em suas viagens, o que dá a ela uma vantagem tática contra essas criaturas.\n\nProficiência em Ferramentas: Veículos (terrestres) - reflete sua habilidade de conduzir carroças e outros veículos, uma perícia valiosa em suas viagens.\n\nEquipamento:\n\nEspada Grande\n\n2 Azagaias\n\nPacote de Explorador\n\n(Página 2 da Ficha)\n\nIdade: 20\n\nAltura: 1,75m\n\nPeso: 70kg\n\nOlhos: Verdes esmeralda, intensos e penetrantes.\n\nPele: Bronzeada, com algumas sardas no rosto.\n\nCabelo: Ruivo flamejante, longo e selvagem, muitas vezes trançado com miçangas e penas.\n\nAliados e Organizações: Tribo do Falcão Ascendente (sua tribo natal), Círculo dos Protetores da Floresta (um grupo de druidas e patrulheiros que ela conheceu em suas andanças).\n\nAparência do Personagem: Anya é uma jovem impressionante, com um físico atlético e uma presença imponente. Suas roupas são feitas de couro e peles de animais, e ela usa um colar feito com dentes de lobo e garras de urso. Uma tatuagem espiral adorna seu braço esquerdo, representando a força da natureza selvagem que ela canaliza em suas fúrias.\n\nCaracterísticas e Traços: Anya é corajosa, impulsiva e ferozmente leal àqueles que ama. Ela tem um senso de justiça inabalável e não hesita em defender os fracos e oprimidos. Ela tem um temperamento explosivo e pode ser teimosa, mas também possui um grande coração e um senso de humor afiado. Ela ama a natureza e os animais, e se sente mais em casa nas florestas e montanhas do que nas cidades e vilas.\n\nIdeais: Liberdade. \"Ninguém tem o direito de controlar a vida de outro. Todos merecem ser livres.\" (Caótico)\n\nVínculos: \"Eu irei proteger minha tribo e honrar a memória daqueles que foram perdidos para as forças das trevas.\"\n\nDefeitos: \"Minha raiva pode me controlar. Às vezes, eu luto para diferenciar meus inimigos dos meus amigos.\"\n\nHistórico do Personagem: Anya cresceu na Tribo do Falcão Ascendente, um povo nômade que vivia nas florestas. Desde jovem, ela demonstrou uma afinidade incomum com a natureza e uma habilidade nata para o combate. Quando sua tribo foi atacada por um grupo de goblins saqueadores, Anya lutou bravamente para defender seu povo, inspirando outros com sua coragem e ferocidade. Após a batalha, ela foi aclamada como uma heroína e recebeu a bênção dos espíritos da floresta. Desde então, ela viaja pelo mundo como uma protetora do povo, combatendo o mal e defendendo os inocentes.\n\nTesouro: 10 po, um amuleto de madeira entalhado com a figura de um falcão, uma faca de caça, um kit de primeiros socorros.",
                         "Agora uma treinamento para voce para situações de conversa e introdução da história",
                         "Eu quero entrar na taverna",
                     ],
@@ -168,7 +167,7 @@ class Mestre:
     
     def upload_to_gemini(path, mime_type=None):
         file = genai.upload_file(path, mime_type=mime_type)
-        print(f"Uploaded file '{file.display_name}' as: {file.uri}")
+        #print(f"Uploaded file '{file.display_name}' as: {file.uri}")
         return file
 
     def wait_for_files_active(files):
@@ -182,53 +181,3 @@ class Mestre:
     def mensagem(self, prompt):
         mensagem = self.chat.send_message(prompt) 
         return mensagem
-
-'''class IAs:
-    def __init__(self, config, modelo, inicio_chat):
-        self.config = config
-        self.model = modelo
-        self.inicio_chat = inicio_chat
-
-
-
-class Syntheris(IAs):
-    def __init__(self, config, modelo, inicio_chat):
-        super().__init__(config, modelo, inicio_chat)
-
-    def mensagem(self, prompt):
-        mensagem = self.inicio_chat.send_message(prompt) 
-        return mensagem.text
-    
-
-class Naratheon(IAs):
-    def __init__(self, config, modelo, inicio_chat):
-        super().__init__(config, modelo, inicio_chat)
-
-    def mensagem(self, prompt):
-        mensagem = self.inicio_chat.send_message(prompt)
-        return mensagem.text
- 
-
-class Veridex(IAs):
-    def __init__(self, config, modelo, inicio_chat):
-        super().__init__(config, modelo, inicio_chat)
-        
-    def mensagem(self, prompt):
-        mensagem = self.inicio_chat.send_message(prompt)
-        return mensagem.text
-
-class Lorealis(IAs):
-    def __init__(self, config, modelo, inicio_chat):
-        super().__init__(config, modelo, inicio_chat)
-        
-    def mensagem(self, prompt):
-        mensagem = self.inicio_chat.send_message(prompt)
-        return mensagem.text
-
-class Figuris(IAs):
-    def __init__(self, config, modelo, inicio_chat):
-        super().__init__(config, modelo, inicio_chat)
-        
-    def mensagem(self, prompt):
-        mensagem = self.inicio_chat.send_message(prompt)
-        return mensagem.text'''

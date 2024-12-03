@@ -1,21 +1,186 @@
 from mestre import Mestre
-
-print('Adventure of Rusty Axe Tavern')
-print('Bem Vindo jogador')
-print('Escolha o se personagem')
-print('Borin o Bárbaro')
-
+from jogador import borin
+import time
+import os
+import keyboard
 
 
 mestre = Mestre()
-mensagem = mestre.mensagem('Começar Aventura')
-print(mensagem)
-continuar = True
 
-while continuar != False:
-    acao = input('')
-    mensagem = mestre.mensagem(acao)
-    print(mensagem)
+
+def selecao_personagem():
+    "Menu de escolha dos personagens do jogo"
+    options = ['Borin o Bárbaro', 'Elara a Barda', 'Pipkin o Ladino', 'Zaltarian a Maga', 'Kael o Paladino']
+    current_option = 0
+    while True: 
+        clear_console()
+        print('\n"Em um mundo mágico e cheio de perigos, a taverna Rusty Axe é mais que um ponto de descanso – é o lar de uma guilda lendária. Heróis de todas as partes se reúnem aqui em busca de glória, fortuna e aventuras épicas. O destino do mundo começa a ser escrito... e você está no centro dessa história!"\n')
+        print('\nPara começar nesse mundo mágico, primeiro escolha seu personagem\n')
+
+        # Mostra as opções e destaca a atual
+        for i, option in enumerate(options):
+            if i == current_option:
+                print(f"> {option}")  # Indica a opção selecionada
+                      
+            else:
+                print(f"  {option}")
+
+        # Espera por eventos do teclado
+        event = keyboard.read_event(suppress=True)
+
+        if event.name == 'down' and event.event_type == 'down':
+            current_option = (current_option + 1) % len(options)  # Vai para a próxima opção
+        elif event.name == 'up' and event.event_type == 'down':
+            current_option = (current_option - 1) % len(options)  # Vai para a opção anterior
+        elif event.name == 'enter' and event.event_type == 'down':
+            return current_option
+
+
+
+
+def creditos():
+    "Exibe os créditos do jogo"
+    print('Créditos')
+
+def clear_console():
+    """Limpa o console."""
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def inicializando():
+    "Inicializa o jogo exibindo o nome"
+    
+
+    clear_console()
+    print('BEM VINDO AO MUNDO DE')
+    time.sleep(1.5)
+    print("""
+░█████╗░██████╗░██╗░░░██╗███████╗███╗░░██╗████████╗██╗░░░██╗██████╗░███████╗  ░█████╗░███████╗
+██╔══██╗██╔══██╗██║░░░██║██╔════╝████╗░██║╚══██╔══╝██║░░░██║██╔══██╗██╔════╝  ██╔══██╗██╔════╝
+███████║██║░░██║╚██╗░██╔╝█████╗░░██╔██╗██║░░░██║░░░██║░░░██║██████╔╝█████╗░░  ██║░░██║█████╗░░
+██╔══██║██║░░██║░╚████╔╝░██╔══╝░░██║╚████║░░░██║░░░██║░░░██║██╔══██╗██╔══╝░░  ██║░░██║██╔══╝░░
+██║░░██║██████╔╝░░╚██╔╝░░███████╗██║░╚███║░░░██║░░░╚██████╔╝██║░░██║███████╗  ╚█████╔╝██║░░░░░
+╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚═════╝░╚═╝░░╚═╝╚══════╝  ░╚════╝░╚═╝░░░░░
+
+██████╗░██╗░░░██╗░██████╗████████╗██╗░░░██╗  ░█████╗░██╗░░██╗███████╗
+██╔══██╗██║░░░██║██╔════╝╚══██╔══╝╚██╗░██╔╝  ██╔══██╗╚██╗██╔╝██╔════╝
+██████╔╝██║░░░██║╚█████╗░░░░██║░░░░╚████╔╝░  ███████║░╚███╔╝░█████╗░░
+██╔══██╗██║░░░██║░╚═══██╗░░░██║░░░░░╚██╔╝░░  ██╔══██║░██╔██╗░██╔══╝░░
+██║░░██║╚██████╔╝██████╔╝░░░██║░░░░░░██║░░░  ██║░░██║██╔╝╚██╗███████╗
+╚═╝░░╚═╝░╚═════╝░╚═════╝░░░░╚═╝░░░░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝\n""")
+    time.sleep(1.5)
+    print('> Jogar')
+    time.sleep(.3)
+    print('  Créditos')
+    time.sleep(.3)
+    print('  Sair')
+
+def menu():
+    """Exibe o main menu interativo."""
+    options = ["Jogar", "Créditos", "Sair"]
+    current_option = 0
+
+
+
+    while True:
+        clear_console()
+        print('BEM VINDO AO MUNDO DE')
+        print("""
+░█████╗░██████╗░██╗░░░██╗███████╗███╗░░██╗████████╗██╗░░░██╗██████╗░███████╗  ░█████╗░███████╗
+██╔══██╗██╔══██╗██║░░░██║██╔════╝████╗░██║╚══██╔══╝██║░░░██║██╔══██╗██╔════╝  ██╔══██╗██╔════╝
+███████║██║░░██║╚██╗░██╔╝█████╗░░██╔██╗██║░░░██║░░░██║░░░██║██████╔╝█████╗░░  ██║░░██║█████╗░░
+██╔══██║██║░░██║░╚████╔╝░██╔══╝░░██║╚████║░░░██║░░░██║░░░██║██╔══██╗██╔══╝░░  ██║░░██║██╔══╝░░
+██║░░██║██████╔╝░░╚██╔╝░░███████╗██║░╚███║░░░██║░░░╚██████╔╝██║░░██║███████╗  ╚█████╔╝██║░░░░░
+╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚═════╝░╚═╝░░╚═╝╚══════╝  ░╚════╝░╚═╝░░░░░
+
+██████╗░██╗░░░██╗░██████╗████████╗██╗░░░██╗  ░█████╗░██╗░░██╗███████╗
+██╔══██╗██║░░░██║██╔════╝╚══██╔══╝╚██╗░██╔╝  ██╔══██╗╚██╗██╔╝██╔════╝
+██████╔╝██║░░░██║╚█████╗░░░░██║░░░░╚████╔╝░  ███████║░╚███╔╝░█████╗░░
+██╔══██╗██║░░░██║░╚═══██╗░░░██║░░░░░╚██╔╝░░  ██╔══██║░██╔██╗░██╔══╝░░
+██║░░██║╚██████╔╝██████╔╝░░░██║░░░░░░██║░░░  ██║░░██║██╔╝╚██╗███████╗
+╚═╝░░╚═╝░╚═════╝░╚═════╝░░░░╚═╝░░░░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝\n""")
+        
+        # Mostra as opções e destaca a atual
+        for i, option in enumerate(options):
+            if i == current_option:
+                print(f"> {option}")  # Indica a opção selecionada
+            else:
+                print(f"  {option}")
+
+        # Espera por eventos do teclado
+        event = keyboard.read_event(suppress=True)
+
+        if event.name == 'down' and event.event_type == 'down':
+            current_option = (current_option + 1) % len(options)  # Vai para a próxima opção
+        elif event.name == 'up' and event.event_type == 'down':
+            current_option = (current_option - 1) % len(options)  # Vai para a opção anterior
+        elif event.name == 'enter' and event.event_type == 'down':
+            return current_option
+        
+
+def enviar_ficha(numero_personagem):
+    if numero_personagem == 0:
+        personagem = borin
+    elif numero_personagem == 1:
+        personagem == elara
+    elif numero_personagem == 2:
+        personagem == pipkin
+    elif numero_personagem == 3:
+        personagem == zaltarian
+    elif numero_personagem == 4:
+        personagem == kael
+    
+    mestre.mensagem(f'Ficha do personagem:\n{ficha(personagem)}')
+
+def ficha(personagem):
+    info = f'Nome: {personagem.nome}\n'
+    info +=  f'Classe Nível: {personagem.classe.nome} {personagem.classe.nivel}\n'
+    info +=  f'Antecendente: {personagem.antecedente}\n'
+    info +=  f'Raça: {personagem.raca.nome}\n'
+    info +=  f'Tendencia: {personagem.tendencia}\n'
+    info +=  f'Ponrtos de Experiencia: {personagem.classe.experiencia}\n'
+    info +=  f'\nHabilidades:\n'
+    info +=  f'Força: {personagem.habilidades.forca}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['forca']}\n'
+    info +=  f'Destreza: {personagem.habilidades.destreza}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['destreza']}\n'
+    info +=  f'Constituição: {personagem.habilidades.constituicao}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['constituicao']}\n'
+    info +=  f'Inteligencia: {personagem.habilidades.inteligencia}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['inteligencia']}\n'
+    info +=  f'Sabedoria: {personagem.habilidades.sabedoria}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['sabedoria']}\n'
+    info +=  f'Carisma: {personagem.habilidades.carisma}\n'
+    info +=  f'Modificador: {personagem.habilidades.modificadores['carisma']}\n'
+    info +=  f'Percepção Passiva: {personagem.percepcao_passiva}\n'
+    info +=  f'Bônus de proeficiencia: {personagem.bonus_proef}\n'
+    info +=  f'\nPerícias:\n'
+    for chave,valor in personagem.pericias.items():
+        info +=  f'{chave}: {valor}\n'
+    info +=  f'CA: {personagem.armadura}\n'
+    info +=  f'Deslocamento: {personagem.deslocamento}\n'
+    info += f'Vida: {personagem.vida}\n'
+    info +=  f'\nInventário:\n'
+    for chave, valor in personagem.inventario.items():
+        info +=  f'{chave}: {valor}\n'
+    info += f'Aliados:{personagem.aliados}\n'
+    info += f'Caracteristicas{personagem.caracteristicas}\n'
+
+inicializando()
+escolha = menu()
+
+if escolha == 0:
+    escolha = selecao_personagem()
+    enviar_ficha(escolha)
+
+elif escolha == 1:
+    creditos()
+
+elif escolha == 2:
+    print('Até mais jogador!')
+    exit
+
+#A partir daqui a aventura deve começar (enviar o prompt "Começar aventura para o mestre")
+
 
 def combate(jogador, inimigo):
     contador = 0
@@ -45,38 +210,7 @@ def combate(jogador, inimigo):
             #enviar para o mestre [...]
         elif escolha == 4:
             #Narracaod o mestre da tentativa de fuga [...]
+            pass
         else:
             #enviar para o mestre que o jogador nao fez nada
-
-
-'''from mestre import Syntheris, Lorealis, Naratheon, Veridex
-
-
-syntheris = Syntheris()
-naratheon = Naratheon()
-veridex = Veridex()
-lorealis = Lorealis()
-
-resposta_syntheris = syntheris.chat('começar')
-acao_jogador = ''
-
-while acao_jogador != 'sair do jogo':
-    if resposta_syntheris == '1':
-        prompt_lorealis = syntheris.mensagem('O que você deseja que a Lorealis faça:')
-        resposta_lorealis = lorealis.mensagem(prompt_lorealis)
-        syntheris.mensagem(f'Lorealis: {resposta_lorealis}')
-
-    elif resposta_syntheris == '2':
-        prompt_naratheon = syntheris.mensagem('O que você deseja que a Naratheon faça:')
-        resposta_naratheon = naratheon.mensagem(prompt_naratheon)
-        print(resposta_naratheon)
-        acao_jogador = input('')
-        syntheris.mensagem(f'Naratheon: {resposta_naratheon}\nJogador: {acao_jogador}')
-
-    elif resposta_syntheris == '3':
-        prompt_veridex = syntheris.mensagem('O que você deseja que a Veridex faça:')
-        resposta_veridex = veridex.mensagem(prompt_veridex)
-        syntheris.mensagem(f'Veridex: {resposta_veridex}')
-
-    else:
-        prompt_syntheris = syntheris.mensagem("lembre-se da ordem de atuação, primeiro voce responde somente somente com o número da IA que quer coordenar, depois que receber a mensagem 'O que você deseja que a IA faça:' Voce escreve o prompt com as informações")'''
+            pass

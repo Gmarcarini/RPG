@@ -38,8 +38,8 @@ class Personagem:
 
 borin = Personagem('Borin Pedra-Rachada', anao_montanha, 'forasteiro', 'Caótico bom', {'Clã Pedra-Rachada': 'exilado', 'Liga dos Exploradores da Montanha Rochosa': 'iniciante'}, ' Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.', 50, {'pequena pepita de ouro': 1, 'Cordao de dente de lobo': 1})
 
-#teste barbaro
-print('Teste Barbaro')
+#Ficha barbaro
+#print('Ficha Borin Pedra-Rachada')
 info = f'Nome: {borin.nome}\n'
 info +=  f'Classe Nível: {borin.classe.nome} {borin.classe.nivel}\n'
 info +=  f'Antecendente: {borin.antecedente}\n'
@@ -66,7 +66,10 @@ for chave,valor in borin.pericias.items():
     info +=  f'{chave}: {valor}\n'
 info +=  f'CA: {borin.armadura}\n'
 info +=  f'Deslocamento: {borin.deslocamento}\n'
-info += f'Vida: {borin.vida}'
+info += f'Vida: {borin.vida}\n'
 info +=  f'\nInventário:\n'
 for chave, valor in borin.inventario.items():
     info +=  f'{chave}: {valor}\n'
+info += f'Aliados:{borin.aliados}\n'
+info += f'Caracteristicas{borin.caracteristicas}\n'
+

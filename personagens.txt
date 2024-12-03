@@ -1,0 +1,514 @@
+Nome do Personagem: Elara Whisperwind
+Classe e Nível: Bardo 1
+Raça: Meio-Elfo
+Antecedente: Artista
+Tendência: Caótica Boa
+
+Habilidades:
+
+Força: 10 (+0)
+
+Destreza: 14 (+2)
+
+Constituição: 13 (+1)
+
+Inteligência: 12 (+1)
+
+Sabedoria: 11 (+0)
+
+Carisma: 16 (+3) (+2 do Meio-Elfo +1 variante humana)
+
+Inspiração: (em branco)
+Bônus de Proficiência: +2
+Classe de Armadura: 15 (Couro Batido +2 DES + Escudo +1 - Elara é cautelosa e prefere ter uma defesa extra, sacrificando um pouco de mobilidade para usar um escudo.)
+Iniciativa: +2 (DES)
+Deslocamento: 9m (racial)
+Pontos de Vida Atuais/Máximo: 9 (8 + CON) Anote 1d8 como dado de vida
+Pontos de Vida Temporários: 0
+Pontos de Experiência: 0
+Dado de Vida: 1d8
+Testes de Resistência: Destreza +4 (PROF +2 DES), Carisma +5 (PROF +3 CAR)
+Sabedoria (Percepção) Passiva: 10
+
+Perícias:
+
+Acrobacia +4 (PROF +2 DES)
+
+Atuação +5 (PROF +3 CAR)
+
+Persuasão +5 (PROF +3 CAR)
+
+Enganação +3 (PROF +1 INT, escolha incomum para um bardo, mostra um lado mais astuto)
+
+Percepção +2 (PROF +0 SAB)
+
+Outras Proficiências e Idiomas:
+
+Idiomas: Comum, Élfico, e vamos adicionar Halfling, refletindo suas viagens e interações com diversas culturas.
+
+Proficiências com Ferramentas: Instrumentos Musicais (flauta, alaúde).
+
+Equipamento:
+
+Rapieira
+
+Arco Curto e 20 flechas
+
+Pacote de Diplomata
+
+Couro Batido
+
+Escudo
+
+Alaúde
+
+(Página 2 da Ficha)
+
+Idade: 22
+
+Altura: 1,70m
+
+Peso: 60kg
+
+Olhos: Violeta, profundos e misteriosos.
+
+Pele: Clara, com um leve tom bronzeado.
+
+Cabelo: Preto, longo e ondulado, frequentemente adornado com flores silvestres.
+
+Aliados e Organizações: Companhia Andante "Melodia da Aurora" (um grupo musical itinerante), Santuário da Deusa da Música (local onde ela estudou música quando criança).
+
+Aparência do Personagem: Elara é uma jovem meio-elfa de beleza estonteante, com feições delicadas e um porte elegante. Seu olhar gentil e sua voz suave escondem uma força interior surpreendente. Ela carrega consigo um alaúde finamente trabalhado e um escudo decorado com pinturas de cenas da natureza.
+
+Características e Traços: Elara é gentil, compassiva e possui um talento natural para a música e a poesia. Ela encanta a todos com suas melodias suaves e suas histórias inspiradoras, e acredita que a música tem o poder de curar feridas e unir as pessoas. Ela é uma idealista incurável, sempre buscando o bem no mundo, mas também é pragmática e sabe se defender quando necessário. Ela é um pouco ingênua em relação à maldade do mundo, mas está sempre disposta a aprender e crescer.
+
+Ideais: Compaixão. "A música pode curar a alma e unir os corações. Eu irei usá-la para trazer alegria e esperança para o mundo." (Bom)
+
+Vínculos: "Eu devo encontrar a fonte da misteriosa melodia que eu ouvi em meus sonhos quando criança. Ela parece me chamar para um destino desconhecido."
+
+Defeitos: "Eu tenho medo de decepcionar aqueles que eu amo, e às vezes, hesito em agir por medo do fracasso."
+
+Histórico do Personagem: Elara cresceu em um orfanato na cidade de Valoria, onde aprendeu a tocar alaúde e a cantar. Desde jovem, ela demonstrava um talento incomum para a música, encantando a todos com suas melodias suaves e sua voz doce. Ela foi acolhida pela Companhia Andante "Melodia da Aurora" quando tinha 16 anos, e desde então, viaja pelo mundo com eles, apresentando-se em tavernas, festivais e cortes nobres. Ela é assombrada por uma melodia misteriosa que ouve em seus sonhos desde criança, e acredita que ela guarda a chave para seu passado e seu futuro.
+
+Tesouro: 20 PO, um pequeno diário com capa de couro onde ela escreve suas poesias, um colar de prata com um pingente em forma de clave de sol, um kit de primeiros socorros.
+
+(Página 3 da Ficha)
+
+(Em branco, para magias que ela aprenderá ao subir de nível)
+
+
+Nome do Personagem: Borin Pedra-Rachada
+Classe e Nível: Bárbaro 1
+Raça: Anão da Montanha
+Antecedente: Forasteiro
+Nome do Jogador: (Seu nome ou apelido)
+Tendência: Caótico Bom (Um anão que valoriza a liberdade e ajuda os necessitados, rompendo com o tradicional alinhamento Leal da sua raça)
+
+Habilidades:
+
+Força: 17 (+3) - Essencial para um bárbaro. O +2 racial do Anão da Montanha eleva a 17.
+
+Destreza: 10 (+0) - Não é uma prioridade para esta construção.
+
+Constituição: 16 (+3) - Importante para a sobrevivência. O +2 racial do Anão da Montanha eleva a 16.
+
+Inteligência: 8 (-1) - Menos importante para um bárbaro focado em combate.
+
+Sabedoria: 12 (+1) - Auxilia na Percepção e Sobrevivência.
+
+Carisma: 13 (+1) - Surpreendentemente alto para um bárbaro, sugerindo uma capacidade nata de liderança, ainda que bruta.
+
+Inspiração: (Deixe em branco inicialmente)
+Bônus de Proficiência: +2
+Classe de Armadura: 16 (Gibão de Peles +3 DES + escudo +2)
+Iniciativa: +2 (DES)
+Deslocamento: 7,5m (racial, sem penalidade por armadura)
+Pontos de Vida Atuais/Máximo: 15 (12 + CON) - Anote 1d12 como dado de vida na ficha
+Pontos de Vida Temporários: 0
+Pontos de Experiência: 0
+Dado de Vida: 1d12
+Testes de Resistência: Força +5 (PROF +3 FOR), Constituição +5 (PROF +3 CON)
+Sabedoria (Percepção) Passiva: 11
+
+Perícias:
+
+Atletismo +5 (PROF +3 FOR)
+
+Sobrevivência +3 (PROF +1 SAB)
+
+Percepção +3 (PROF +1 SAB)
+
+Adestrar Animais +3 (Antecedente +1 SAB)
+
+Outras Proficiências e Idiomas:
+
+Idiomas: Comum, Anão e um idioma adicional do antecedente (vamos escolher Gigante para representar sua familiaridade com criaturas grandes e perigosas das montanhas).
+
+Proficiência em Ferramentas: Ferramentas de Ferreiro (Anão) e um tipo adicional do antecedente (vamos escolher Instrumentos Musicais de Percussão para adicionar um elemento único ao personagem: ele toca tambor para invocar os espíritos da montanha antes da batalha).
+
+Equipamento:
+
+Machado de Batalha
+
+2 Machadinhas de Arremesso
+
+Pacote de Explorador
+
+Ferramentas de Ferreiro
+
+Tambor
+
+Altura: 1,39m (Um pouco mais baixo que a média dos anões da montanha, o que pode ser uma fonte de insegurança que ele compensa com ferocidade)
+
+Peso: 72kg
+
+Olhos: Castanhos escuros
+
+Pele: Bronze
+
+Cabelo: Preto, com algumas mechas grisalhas nas têmporas.
+
+Aliados e Organizações: Clã Pedra-Rachada (exilado), Liga dos Exploradores da Montanha Rochosa (uma pequena guilda de aventureiros que Borin conheceu recentemente).
+
+Aparência do Personagem: Baixo e robusto, mesmo para os padrões de anões. Barba e bigode bem cuidados e trançados com fios de cobre. Uma cicatriz profunda cruza seu olho esquerdo, lembrança de um encontro com um lobo atroz. Tatuagens representando runas anãs adornam seus braços e ombros.
+
+Características e Traços: Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.
+
+Ideais: Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." (Caótico)
+
+Vínculos: "Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã."
+
+Defeitos: "Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura."
+
+Histórico do Personagem: Borin nasceu no clã Pedra-Rachada, conhecido por sua habilidade na mineração e metalurgia. Ele sempre foi menor que os outros anões, o que o levou a provar seu valor com atos de bravura e ousadia. Quando um gigante do gelo atacou seu vilarejo, matando seu irmão e roubando o totem sagrado do clã (uma antiga machadinha de guerra feita com ossos de dragão), Borin jurou vingança. Ele deixou sua casa nas montanhas e se juntou à Liga dos Exploradores da Montanha Rochosa para aprimorar suas habilidades de combate e rastrear o gigante.
+
+Tesouro: 50 po, uma pequena pepita de ouro bruto, um dente de lobo atroz amarrado em um cordão de couro.
+
+(Página 3 da Ficha)
+
+Essa página ficará em branco inicialmente, pois Borin não possui magias. Se ele optar por multiclasse com uma classe conjuradora, as informações sobre suas magias serão anotadas aqui.
+
+
+Nome do Personagem: Pipkin Quickfoot
+Classe e Nível: Ladino 1
+Raça: Gnomo da Floresta
+Antecedente: Charlatão
+Tendência: Caótico Neutro
+
+Habilidades:
+
+Força: 8 (-1) - Gnomos não são conhecidos por sua força.
+
+Destreza: 16 (+3) - Essencial para um ladino, +1 racial do Gnomo da Floresta e +2 pela variante humana.
+
+Constituição: 12 (+1)
+
+Inteligência: 14 (+2) - Pipkin é esperto e criativo.
+
+Sabedoria: 10 (+0)
+
+Carisma: 13 (+1) - Combina com seu antecedente de charlatão.
+
+Inspiração: (em branco)
+Bônus de Proficiência: +2
+Classe de Armadura: 16 (11 + DES +3 de armadura de couro batido + escudo +1 - Priorizando furtividade, ele usa armadura de couro. Como ele é pequeno, o escudo deve ser apropriado para seu tamanho.)
+Iniciativa: +3 (DES)
+Deslocamento: 7,5m (racial)
+Pontos de Vida Atuais/Máximo: 9 (8 + CON) Anote 1d8 como dado de vida
+Pontos de Vida Temporários: 0
+Pontos de Experiência: 0
+Dado de Vida: 1d8
+Testes de Resistência: Destreza +5 (PROF +3 DES), Inteligência +3 (PROF +1 INT)
+Sabedoria (Percepção) Passiva: 10
+
+Perícias:
+
+Acrobacia +5 (PROF +3 DES)
+
+Atuação +3 (PROF +1 CAR) - Para enganar e se passar por outras pessoas.
+
+Enganação +3 (PROF +1 CAR)
+
+Furtividade +5 (PROF +3 DES)
+
+Intuição +0 (PROF +0 SAB)
+
+Persuasão +3 (PROF +1 CAR)
+
+Outras Proficiências e Idiomas:
+
+Idiomas: Comum, Gnômico, e vamos adicionar Silvestre (por sua raça) e um idioma adicional a sua escolha. Como ele é um charlatão, talvez ele tenha aprendido a falar um pouco de Infernal para impressionar ou enganar as pessoas.
+
+Proficiências com Ferramentas: Kit de Disfarces e Ferramentas de Ladrão (ambos do antecedente).
+
+Equipamento:
+
+Rapieira
+
+Arco Curto e 20 flechas
+
+Pacote de Assaltante (inclui Ferramentas de Ladrão)
+
+Kit de Disfarces
+
+(Página 2 da Ficha)
+
+Idade: 54 (Jovem para um gnomo, o que contribui para sua impulsividade.)
+
+Altura: 0,96m
+
+Peso: 20kg
+
+Olhos: Castanho-escuros, brilhantes e astutos, sempre em movimento.
+
+Pele: Bronze, com um leve tom avermelhado.
+
+Cabelo: Loiro-acinzentado, curto e espetado.
+
+Aliados e Organizações: Trupe Circense "Os Malabares da Meia-Noite" (um grupo de artistas itinerantes com quem ele já trabalhou), Guilda dos Mercadores Ambulantes (uma rede de comerciantes e contrabandistas).
+
+Aparência do Personagem: Pipkin é um gnomo pequeno e ágil, com roupas coloridas e chamativas que ele usa para se disfarçar e enganar as pessoas. Ele sempre carrega consigo um kit de disfarces e ferramentas de ladrão, e seu sorriso astuto e seus olhos penetrantes fazem com que seja difícil confiar nele.
+
+Características e Traços: Pipkin é um charlatão nato, sempre pronto para um bom golpe ou uma piada. Ele é inteligente, criativo e carismático, e sabe como usar suas palavras e sua lábia para manipular e enganar os outros. Ele adora pregar peças e se divertir às custas dos outros, mas também tem um bom coração e, às vezes, ajuda aqueles que precisam (especialmente se isso lhe for conveniente). Ele é um pouco covarde e prefere evitar o confronto direto, mas é um mestre em se esquivar do perigo e escapar de situações complicadas.
+
+Ideais: Liberdade. "Regras são para os tolos. Eu faço minhas próprias regras." (Caótico)
+
+Vínculos: "Eu preciso encontrar o tesouro perdido do Grande Gnomo Trapaceiro. É meu destino!"
+
+Defeitos: "Eu sou ganancioso e egoísta, e faria qualquer coisa por dinheiro (mesmo que isso signifique trair meus amigos)."
+
+Histórico do Personagem: Pipkin cresceu em uma pequena vila na floresta, onde aprendeu a arte da trapaça e do ilusionismo com um velho gnomo charlatão. Ele se juntou à Trupe Circense "Os Malabares da Meia-Noite" quando era adolescente, e viajou pelo mundo com eles, aperfeiçoando suas habilidades como artista e vigarista. Ele se envolveu com a Guilda dos Mercadores Ambulantes em suas andanças, e agora usa seus talentos para contrabandear mercadorias e realizar pequenos golpes nas cidades e vilas que visita.
+
+Tesouro: 25 po (que ele provavelmente gastará em jogos de azar ou bugigangas), um baralho de cartas marcado, uma pequena caixa de música gnômica que toca uma melodia irritantemente cativante.
+
+(Página 3 da Ficha) (em branco)
+
+
+Nome do Personagem: Zaltarion "Sombras Noturnas"
+Classe e Nível: Mago 1
+Raça: Tiefling
+Antecedente: Sábio
+Tendência: Caótico Neutro
+
+Habilidades:
+
+Força: 10 (+0)
+
+Destreza: 14 (+2)
+
+Constituição: 13 (+1)
+
+Inteligência: 16 (+3) - Essencial para um mago, aumentada pelo +1 racial do Tiefling.
+
+Sabedoria: 11 (+0)
+
+Carisma: 12 (+1)
+
+Inspiração: (em branco)
+Bônus de Proficiência: +2
+Classe de Armadura: 12 (10 + DES) - Zaltarion não usa armadura.
+Iniciativa: +2 (DES)
+Deslocamento: 9m
+Pontos de Vida Atuais/Máximo: 7 (6 + CON) Anote 1d6 como dado de vida
+Pontos de Vida Temporários: 0
+Pontos de Experiência: 0
+Dado de Vida: 1d6
+Testes de Resistência: Inteligência +5 (PROF +3 INT), Sabedoria +2 (PROF +0 SAB)
+Sabedoria (Percepção) Passiva: 10
+
+Perícias:
+
+Arcanismo +5 (PROF +3 INT)
+
+História +3 (PROF +1 INT)
+
+Investigação +3 (PROF +1 INT)
+
+Religião +2 (PROF +0 SAB, para entender melhor a natureza das outras criaturas e planos)
+
+Outras Proficiências e Idiomas:
+
+Idiomas: Comum, Infernal, e vamos adicionar Abissal (conhecimento dos planos), refletindo seus estudos arcanos.
+
+Grimório (Contém as magias que ele conhece.)
+
+Equipamento:
+
+Bordão
+
+Adaga
+
+Bolsa de Componentes
+
+Pacote de Estudioso
+
+Grimório
+
+(Página 2 da Ficha)
+
+Idade: 27 (considerado jovem para um Tiefling, ainda no início de suas jornadas arcanas)
+
+Altura: 1,80m
+
+Peso: 75kg
+
+Olhos: Vermelhos brilhantes, penetrantes, como brasas.
+
+Pele: Vermelha escura, quase vinho.
+
+Cabelo: Preto, liso e comprido, caindo pelas costas. Pequenos chifres curvados emergem de sua testa. Uma fina cauda serpenteia atrás dele.
+
+Aliados e Organizações: Academia Arcana de Thassilon (uma antiga e renomada academia de magia, agora em ruínas), Ordem dos Olhos Secretos (uma sociedade secreta de magos que buscam conhecimento proibido).
+
+Aparência do Personagem: Zaltarion é um tiefling imponente e misterioso, com uma aura sombria que o envolve. Suas roupas escuras e seu olhar penetrante inspiram tanto respeito quanto temor.
+
+Características e Traços: Zaltarion é um estudioso dedicado e um pesquisador incansável do conhecimento arcano. Ele é inteligente, curioso e ambicioso, e acredita que a magia é a chave para desvendar os segredos do multiverso. Ele é um tanto arrogante e prepotente, e tende a subestimar aqueles que não possuem seus dons mágicos. Ele tem um fascínio pelo oculto e pelo proibido, e não hesita em se aventurar em lugares perigosos ou lidar com forças sombrias em busca de conhecimento.
+
+Ideais: Conhecimento. "O conhecimento é poder. Eu irei desvendar todos os segredos do multiverso, não importa o custo." (Neutro)
+
+Vínculos: "Eu preciso encontrar os fragmentos perdidos do grimório de Thassilon. Ele contém conhecimentos arcanos que foram perdidos para as eras."
+
+Defeitos: "Minha sede por conhecimento pode me cegar para o perigo. Às vezes, eu estou disposto a arriscar tudo, até mesmo minha vida, por uma chance de descobrir algo novo."
+
+Histórico do Personagem: Zaltarion nasceu em uma pequena vila, onde foi criado por um velho sábio que o ensinou os fundamentos da magia. Ele demonstrou um talento excepcional para as artes arcanas desde jovem, e foi enviado para a Academia Arcana de Thassilon para continuar seus estudos. Lá, ele se destacou por sua inteligência e sua ambição, mas também por sua curiosidade insaciável e sua tendência a quebrar as regras. Ele se juntou à Ordem dos Olhos Secretos em busca de conhecimento proibido, e agora viaja pelo mundo em busca de artefatos mágicos e locais esquecidos, determinado a desvendar os segredos mais obscuros do multiverso.
+
+Tesouro: 15 PO, um pequeno amuleto de obsidiana que ele usa para canalizar sua magia, um livro de magias com anotações e diagramas arcanos, um kit de primeiros socorros.
+
+(Página 3 da Ficha)
+
+Truques:
+
+Raio de Gelo
+
+Mãos Mágicas
+
+Prestidigitação
+
+Magias Conhecidas de Nível 1 (escolha duas da escola de encantamento e ilusão e as outras duas ficam livres):
+
+Armadura Arcana (Abjuração)
+
+Dormir (Encantamento)
+
+Mísseis Mágicos (Evocação)
+
+Escudo Arcano (Abjuração)
+
+Magias Conhecidas (Grimorio):
+
+Armadura Arcana
+
+Sono
+
+Mísseis Mágicos
+
+Escudo Arcano
+
+Detectar Magia
+
+Luz
+
+Toque Chocante
+
+Compreender Idiomas
+
+Desfarçar
+
+Enfeitiçar Pessoa.
+
+Lembre-se que um mago de nível 1 começa com 3 truques à sua escolha e 6 magias de nível 1 em seu grimório. Ele pode preparar um número de magias igual ao seu modificador de Inteligência + o nível de mago (mínimo de uma magia). Com Inteligência 16, Zaltarion pode preparar 4 magias de 1º nível. As magias em seu grimório são as que ele copiou até o momento e não necessariamente as que ele tem preparadas para o dia.
+
+
+Nome do Personagem: Kael Brassscale
+Classe e Nível: Paladino 1
+Raça: Draconato (Bronze)
+Antecedente: Soldado
+Tendência: Leal e Bom
+
+Habilidades:
+
+Força: 16 (+3) - Bônus racial do Draconato. Importante para combate corpo a corpo.
+
+Destreza: 10 (+0)
+
+Constituição: 14 (+2)
+
+Inteligência: 12 (+1)
+
+Sabedoria: 8 (-1)
+
+Carisma: 15 (+2) - Importante para um paladino, +1 racial do Draconato
+
+Inspiração: (em branco)
+Bônus de Proficiência: +2
+Classe de Armadura: 18 (Armadura de Placas)
+Iniciativa: +0 (DES)
+Deslocamento: 9m
+Pontos de Vida Atuais/Máximo: 12 (10 + CON) Anote 1d10 como dado de vida
+Pontos de Vida Temporários: 0
+Pontos de Experiência: 0
+Dado de Vida: 1d10
+Testes de Resistência: Sabedoria -1 (PROF-1 SAB), Carisma +4 (PROF +2 CAR)
+Sabedoria (Percepção) Passiva: 9
+
+Perícias:
+
+Atletismo +5 (PROF +3 FOR)
+
+Intimidação +4 (PROF +2 CAR)
+
+Persuasão +2 (CAR) - Para interações sociais.
+
+Outras Proficiências e Idiomas:
+
+Idiomas: Comum e Dracônico.
+
+Proficiências com Armas: Armas simples, Armas Marciais
+
+Equipamento:
+
+Armadura de Placas
+
+Espada Longa
+
+Escudo
+
+5 Azagaias
+
+Pacote de Sacerdote
+
+Símbolo Sagrado (um amuleto de bronze com o símbolo de Bahamut, ou outro deus da justiça ou proteção)
+
+(Página 2 da Ficha)
+
+Idade: 16 (Draconatos amadurecem mais rápido que humanos).
+
+Altura: 1,95m - Imponente e forte.
+
+Peso: 110 kg
+
+Olhos: Dourados, brilhantes e penetrantes.
+
+Pele: Escamas de bronze, espessas e resistentes.
+
+Cabelo: Não se aplica (Draconatos não têm cabelo).
+
+Aliados e Organizações: Legião da Aurora (regimento militar onde serviu), Culto de Bahamut (ou outro deus similar).
+
+Aparência do Personagem: Kael é um draconato imponente, com uma armadura de placas que brilha como o sol. Seus olhos dourados transmitem uma aura de poder e justiça, e sua postura ereta e seus movimentos precisos demonstram seu treinamento militar.
+
+Características e Traços: Kael é um paladino devoto e disciplinado, seguindo rigidamente os princípios de seu juramento. Ele é corajoso, leal e honrado, e sempre coloca o bem-estar dos outros acima do seu próprio. Ele é um pouco sério e reservado, mas também possui um senso de humor seco e sarcástico. Ele acredita que é seu dever proteger os fracos e os inocentes, e não hesita em usar a força para combater o mal.
+
+Ideais: Justiça. "Eu defenderei os fracos e punirei os ímpios, sem exceção." (Leal)
+
+Vínculos: "Eu devo lealdade aos meus companheiros de armas e honrarei a memória daqueles que tombaram em batalha."
+
+Defeitos: "Eu sou teimoso e orgulhoso, e às vezes me recuso a recuar, mesmo quando a situação exige."
+
+Histórico do Personagem: Kael serviu na Legião da Aurora, um renomado regimento militar conhecido por sua bravura e disciplina. Ele se destacou como um soldado exemplar, sempre pronto para defender seus companheiros e cumprir seu dever. Durante uma batalha particularmente feroz contra um grupo de orcs, Kael testemunhou a morte de seu capitão, um paladino honrado que o inspirou a seguir o mesmo caminho. Após a batalha, Kael fez o juramento de paladino e se dedicou à causa da justiça e da proteção dos inocentes.
+
+Tesouro: 50 po, uma insígnia da Legião da Aurora, um pequeno livro de orações com a capa de couro, um kit de primeiros socorros.
+
+(Página 3 da Ficha)
+
+(Em branco, para magias de paladino conforme ele as aprende.)
