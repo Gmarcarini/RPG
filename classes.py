@@ -1,6 +1,7 @@
 from habilidades import Habilidades
 class Classes:
-    def __init__(self, habilidades):
+    def __init__(self, nome, habilidades):
+        self.nome = nome
         self.experiencia = 0
         self.habilidades = habilidades
         self.nivel = 0
@@ -10,7 +11,7 @@ class Classes:
             'arcanismo': self.habilidades.modificadores['inteligencia'],
             'atletismo': self.habilidades.modificadores['forca'],
             'atuacao': self.habilidades.modificadores['carisma'],
-            'enaganacao': self.habilidades.modificadores['carisma'],
+            'enganacao': self.habilidades.modificadores['carisma'],
             'furtividade': self.habilidades.modificadores['destreza'],
             'historia': self.habilidades.modificadores['inteligencia'],
             'intimidacao': self.habilidades.modificadores['carisma'],
@@ -93,14 +94,13 @@ class Classes:
             self.bonus_proef = 6
 
 class Barbaro(Classes):
-    def __init__(self, habilidades):
-        super().__init__(habilidades)
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.niveis()
         self.vida = 12 + self.habilidades.modificadores['constituicao']
-        self.experiencia = 0
         self.proef = ['armaduras leves', 'armaduras medias', 'escudos', 'armas simples', 'armas marciais', ]
-        self.pericias['atletismo'] =+ self.bonus_proef
-        self.pericias['intimidacao'] =+ self.bonus_proef
-        self.bonus_proef = 0
+        self.pericias['atletismo'] = self.pericias['atletismo'] + self.bonus_proef
+        self.pericias['intimidacao'] = self.pericias['intimidacao'] + self.bonus_proef
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
             'machado grande': 1,
@@ -113,7 +113,7 @@ class Barbaro(Classes):
         self.forca_anterior = 0
         self.duracao_especial = 10
         self.furias = 2
-        self.niveis()
+
 
     def especial(self):
         #furia
@@ -126,18 +126,17 @@ class Barbaro(Classes):
     def desf_furia(self):
         self.vida = self.vida_anterior
         self.habilidades.forca = self.forca_anterior
-        self.duracao_furia = 10
         self.habilidades.bonus()
 
 class Bardo(Classes):
-    def __init__(self, habilidades):
-        super().__init__(habilidades)
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.niveis()
         self.vida = 8 + self.habilidades.modificadores['constituicao']
         self.proef = ['armaduras leves' , 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'banjo', 'flauta', 'batuque' ]
-        self.pericias['persuasao'] =+ self.bonus_proef
-        self.pericias['atuacao'] =+ self.bonus_proef
-        self.pericias['enganacao'] =+ self.bonus_proef
-        self.experiencia = 0
+        self.pericias['persuasao']+= self.bonus_proef
+        self.pericias['atuacao'] += self.bonus_proef
+        self.pericias['enganacao'] += self.bonus_proef
         self.bonus_proef = 0
         self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.inventario = {
@@ -149,7 +148,7 @@ class Bardo(Classes):
         self.truques = ['globo de luz', 'zombaria viciosa']
         self.magias = ['enfeiticar pessoa', 'detectar magia', 'palavra curativa', 'onda trovejante']
         self.espacos_magia = 2
-        self.niveis()
+
 
     def especial(self):
         #inspiracao bardica
@@ -157,14 +156,15 @@ class Bardo(Classes):
 
 
 class Ladino(Classes):
-    def __init__(self, habilidades):
-        super().__init__(habilidades)
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.niveis()
         self.vida = 8 + self.habilidades.modificadores['constituicao']
         self.proef = ['armaduras leves', 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'ferramentas de ladrão']
-        self.pericias['atuacao'] =+ self.bonus_proef
-        self.pericias['acrobacia'] =+ self.bonus_proef
-        self.pericias['furtividade'] =+ self.bonus_proef
-        self.pericias['intuicao'] =+ self.bonus_proef
+        self.pericias['atuacao'] += self.bonus_proef
+        self.pericias['acrobacia'] += self.bonus_proef
+        self.pericias['furtividade'] += self.bonus_proef
+        self.pericias['intuicao'] += self.bonus_proef
         self.experiencia = 0
         self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
@@ -177,19 +177,19 @@ class Ladino(Classes):
         }
         self.CA = 11 + self.habilidades.modificadores['destreza']
         self.ataque_furtivo = self.nivel + self.habilidades.modificadores['destreza']
-        self.niveis()
 
     def especial(self):
        #ataquefurtivo
         return f'Uma vez por turno, voce pode adicionar 1d6 na jogada de dano'
 
 class Mago(Classes):
-    def __init__(self, habilidades):
-        super().__init__(habilidades)
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.niveis()
         self.vida = 6 + self.habilidades.modificadores['constituicao']
         self.proef = [ 'adagas', 'dardos', 'fundas', 'bastões', 'bestas leves']
-        self.pericias['arcanismo'] =+ self.bonus_proef
-        self.pericias['historia'] =+ self.bonus_proef
+        self.pericias['arcanismo'] += self.bonus_proef
+        self.pericias['historia'] += self.bonus_proef
         self.experiencia = 0
         self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
@@ -205,20 +205,18 @@ class Mago(Classes):
         self.truques = ['luz', 'prestidigitação', 'raio de gelo', 'toque chocante']
         self.magias = ['misseis mágicos', 'escudo arcano','sono']
 
-
-        self.niveis()
-
     def especial(self):
         #recuperacao arcana
         return f'Uma vez por dia, após um descanso curto, o jogador pode recuperar espacos de magia gastos'
     
 class Paladino(Classes):
-    def __init__(self, habilidades):
-        super().__init__(habilidades)
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.niveis()
         self.vida = 10 + self.habilidades.modificadores['constituicao']
         self.proef = ['todas as armaduras' , 'escudos', 'armas simples', 'armas marciais' ]
-        self.pericias['intuicao'] =+ self.bonus_proef
-        self.pericias['medicina'] =+ self.bonus_proef
+        self.pericias['intuicao'] += self.bonus_proef
+        self.pericias['medicina'] += self.bonus_proef
         self.experiencia = 0
         self.bonus_proef = 2
         self.percepcao_passiva = 10 + self.pericias['percepcao']
@@ -228,28 +226,27 @@ class Paladino(Classes):
             '5 azagaias': 5,
             'kit de sacerdote': 1,
             'simbolo sagrado': 1
-
         }
         self.CA = 18 #armadura de placas completa
         self.magias = ['auxilio divino','bencao']
         self.cura_maos = 5
-        self.niveis()
+
 
     def especial(self):
         #cura pelas maos
         return f'O jogador pode curar uma criatura com um toque'
 
 hab_barbaro = Habilidades(15, 13, 14, 8, 12, 10)
-barbaro = Barbaro(hab_barbaro)
+barbaro = Barbaro('Barbaro', hab_barbaro)
 
 hab_bardo = Habilidades(10, 14, 12, 8, 13, 15)
-bardo = Bardo(hab_bardo)
+bardo = Bardo('Bardo', hab_bardo)
 
 hab_ladino = Habilidades(12, 15, 8, 14, 13, 10)
-ladino = Ladino(hab_ladino)
+ladino = Ladino('Ladino', hab_ladino)
 
 hab_mago = Habilidades(8, 12, 10, 15, 14, 13)
-mago = Mago(hab_mago)
+mago = Mago('Mago', hab_mago)
 
 hab_paladino = Habilidades(15, 12, 13, 10, 8 ,14)
-paladino = Paladino(hab_paladino)
+paladino = Paladino('Paladino', hab_paladino)
