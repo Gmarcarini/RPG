@@ -1,5 +1,6 @@
 import random
 from racas import anao_montanha, gnomo_floresta, tieflings, meio_elfo, draconato
+from habilidades import Pericias
 
 class Personagem:
     def __init__(self, nome, raca, antecedente, tendencia,
@@ -12,13 +13,14 @@ class Personagem:
         self.tendencia = tendencia
         self.habilidades = self.classe.habilidades
         self.bonus_proef = self.classe.bonus_proef
+        self.proef_pericias = self.classe.proef_pericias
+        self.atr_pericias()
         self.armadura = self.classe.CA
         self.deslocamento = raca.deslocamento
         self.vida = self.classe.vida
-        self.percepcao_passiva = self.classe.percepcao_passiva
-        self.pericias = self.classe.pericias
+        self.percepcao_passiva = 10 + self.pericias.percepcao
         self.idiomas = raca.idiomas
-        self.proeficiencias = self.classe.proef
+        self.proeficiencias = self.classe.proef_itens
         self.equipamentos = self.classe.inventario
         self.altura = raca.altura
         self.peso = raca.peso
@@ -26,15 +28,18 @@ class Personagem:
         self.caracteristicas = caracteristicas
         self.tesouro = tesouro
         self.inventario = {**self.classe.inventario, **inventario}
-
     def Rolagens(self):
-        dados = f'Força: {random.randint(1,20) + self.habilidades.modificadores['forca']}'
+        dados = f'Força: ({random.randint(1,20)}) + ({self.habilidades.modificadores['forca']})'
         dados += f'Destreza: {random.randint(1,20) + self.habilidades.modificadores['destreza']}'
         dados += f'Constituicao: {random.randint(1,20) + self.habilidades.modificadores['constituicao']}'
         dados += f'Inteligencia: {random.randint(1,20) + self.habilidades.modificadores['inteligencia']}'
         dados += f'Sabedoria: {random.randint(1,20) + self.habilidades.modificadores['sabedoria']}'
         dados += f'Carisma: {random.randint(1,20) + self.habilidades.modificadores['carisma']}'
         return dados
+    
+    def atr_pericias(self):
+        self.pericias = Pericias(self.bonus_proef, self.proef_pericias, self.habilidades)
+
 
 borin = Personagem('Borin Pedra-Rachada', anao_montanha, 'forasteiro', 'Caótico bom', {'Clã Pedra-Rachada': 'exilado', 'Liga dos Exploradores da Montanha Rochosa': 'iniciante'}, ' Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.', 50, {'pequena pepita de ouro': 1, 'Cordao de dente de lobo': 1})
 
@@ -46,7 +51,7 @@ zaltarian = Personagem('Zaltarian Galdhar', tieflings, 'Sábio', 'Caótico Neutr
 
 kael = Personagem('Kael Brassscale', draconato, 'Soldado', 'Leal Bom', {'Legião da Aurora': 'exsoldado', 'Culto de Bahamut': 'participante'}, 'Kael é um paladino devoto e disciplinado, seguindo rigidamente os princípios de seu juramento. Ele é corajoso, leal e honrado, e sempre coloca o bem-estar dos outros acima do seu próprio. Ele é um pouco sério e reservado, mas também possui um senso de humor seco e sarcástico. Ele acredita que é seu dever proteger os fracos e os inocentes, e não hesita em usar a força para combater o mal. Justiça. "Eu defenderei os fracos e punirei os ímpios, sem exceção." (Leal)  "Eu devo lealdade aos meus companheiros de armas e honrarei a memória daqueles que tombaram em batalha." "Eu sou teimoso e orgulhoso, e às vezes me recuso a recuar, mesmo quando a situação exige."', 50, {'insígnia da Legião da Aurora': 1, 'livro pequeno de orações com a capa de couro': 1, 'kit de primeiros socorros': 1})
 
-personagem = Personagem('Kael Brassscale', draconato, 'Soldado', 'Leal Bom', {'Legião da Aurora': 'exsoldado', 'Culto de Bahamut': 'participante'}, 'Kael é um paladino devoto e disciplinado, seguindo rigidamente os princípios de seu juramento. Ele é corajoso, leal e honrado, e sempre coloca o bem-estar dos outros acima do seu próprio. Ele é um pouco sério e reservado, mas também possui um senso de humor seco e sarcástico. Ele acredita que é seu dever proteger os fracos e os inocentes, e não hesita em usar a força para combater o mal. Justiça. "Eu defenderei os fracos e punirei os ímpios, sem exceção." (Leal)  "Eu devo lealdade aos meus companheiros de armas e honrarei a memória daqueles que tombaram em batalha." "Eu sou teimoso e orgulhoso, e às vezes me recuso a recuar, mesmo quando a situação exige."', 50, {'insígnia da Legião da Aurora': 1, 'livro pequeno de orações com a capa de couro': 1, 'kit de primeiros socorros': 1})
+personagem = Personagem('Borin Pedra-Rachada', anao_montanha, 'forasteiro', 'Caótico bom', {'Clã Pedra-Rachada': 'exilado', 'Liga dos Exploradores da Montanha Rochosa': 'iniciante'}, ' Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.', 50, {'pequena pepita de ouro': 1, 'Cordao de dente de lobo': 1})
 
 #Ficha barbaro
 #print('Ficha Borin Pedra-Rachada')
@@ -72,8 +77,7 @@ info +=  f'Modificador: {personagem.habilidades.modificadores['carisma']}\n'
 info +=  f'Percepção Passiva: {personagem.percepcao_passiva}\n'
 info +=  f'Bônus de proeficiencia: {personagem.bonus_proef}\n'
 info +=  f'\nPerícias:\n'
-for chave,valor in personagem.pericias.items():
-    info +=  f'{chave}: {valor}\n'
+info +=  f'{personagem.pericias}'
 info +=  f'CA: {personagem.armadura}\n'
 info +=  f'Deslocamento: {personagem.deslocamento}\n'
 info += f'Vida: {personagem.vida}\n'
@@ -82,4 +86,5 @@ for chave, valor in personagem.inventario.items():
     info +=  f'{chave}: {valor}\n'
 info += f'Aliados:{personagem.aliados}\n'
 info += f'Caracteristicas{personagem.caracteristicas}\n'
+print(info)
 

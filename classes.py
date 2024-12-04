@@ -5,28 +5,7 @@ class Classes:
         self.experiencia = 0
         self.habilidades = habilidades
         self.nivel = 0
-        self.pericias = {
-            'acrobacia': self.habilidades.modificadores['destreza'],
-            'adestrar animais': self.habilidades.modificadores['sabedoria'],
-            'arcanismo': self.habilidades.modificadores['inteligencia'],
-            'atletismo': self.habilidades.modificadores['forca'],
-            'atuacao': self.habilidades.modificadores['carisma'],
-            'enganacao': self.habilidades.modificadores['carisma'],
-            'furtividade': self.habilidades.modificadores['destreza'],
-            'historia': self.habilidades.modificadores['inteligencia'],
-            'intimidacao': self.habilidades.modificadores['carisma'],
-            'intuicao': self.habilidades.modificadores['sabedoria'],
-            'investigacao': self.habilidades.modificadores['inteligencia'],
-            'medicina': self.habilidades.modificadores['sabedoria'],
-            'natureza': self.habilidades.modificadores['inteligencia'],
-            'percepcao': self.habilidades.modificadores['sabedoria'],
-            'persuasao': self.habilidades.modificadores['carisma'],
-            'pretidigitacao': self.habilidades.modificadores['destreza'],
-            'religiao': self.habilidades.modificadores['inteligencia'],
-            'sobrevivencia': self.habilidades.modificadores['sabedoria']
-        }
         self.bonus_proef = 0
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
         self.duracao_especial = None
         self.inventario = {}
         self.CA = 0
@@ -98,10 +77,8 @@ class Barbaro(Classes):
         super().__init__(nome, habilidades)
         self.niveis()
         self.vida = 12 + self.habilidades.modificadores['constituicao']
-        self.proef = ['armaduras leves', 'armaduras medias', 'escudos', 'armas simples', 'armas marciais', ]
-        self.pericias['atletismo'] = self.pericias['atletismo'] + self.bonus_proef
-        self.pericias['intimidacao'] = self.pericias['intimidacao'] + self.bonus_proef
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
+        self.proef_itens = ['armaduras leves', 'armaduras medias', 'escudos', 'armas simples', 'armas marciais', ]
+        self.proef_pericias = ['atletismo', 'intimidacao']
         self.inventario = {
             'machado grande': 1,
             'machadinha': 2,
@@ -128,16 +105,15 @@ class Barbaro(Classes):
         self.habilidades.forca = self.forca_anterior
         self.habilidades.bonus()
 
+    
+
 class Bardo(Classes):
     def __init__(self, nome, habilidades):
         super().__init__(nome, habilidades)
         self.niveis()
         self.vida = 8 + self.habilidades.modificadores['constituicao']
-        self.proef = ['armaduras leves' , 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'banjo', 'flauta', 'batuque' ]
-        self.pericias['persuasao']+= self.bonus_proef
-        self.pericias['atuacao'] += self.bonus_proef
-        self.pericias['enganacao'] += self.bonus_proef
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
+        self.proef_itens = ['armaduras leves' , 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'banjo', 'flauta', 'batuque' ]
+        self.proef_pericias = ['persuasao', 'atuacao', 'enganacao']
         self.inventario = {
             'espada longa': 1,
             'flauta': 1,
@@ -159,12 +135,8 @@ class Ladino(Classes):
         super().__init__(nome, habilidades)
         self.niveis()
         self.vida = 8 + self.habilidades.modificadores['constituicao']
-        self.proef = ['armaduras leves', 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'ferramentas de ladrão']
-        self.pericias['atuacao'] += self.bonus_proef
-        self.pericias['acrobacia'] += self.bonus_proef
-        self.pericias['furtividade'] += self.bonus_proef
-        self.pericias['intuicao'] += self.bonus_proef
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
+        self.proef_itens = ['armaduras leves', 'armas simples', 'besta de mao', 'espadas longas', 'rapieiras', 'espadas curtas', 'ferramentas de ladrão']
+        self.proef_pericias = ['atuacao', 'acrobacia', 'furtividade', 'intuicao']
         self.inventario = {
             'rapieira': 1,
             'arco curto': 1,
@@ -184,10 +156,8 @@ class Mago(Classes):
         super().__init__(nome, habilidades)
         self.niveis()
         self.vida = 6 + self.habilidades.modificadores['constituicao']
-        self.proef = [ 'adagas', 'dardos', 'fundas', 'bastões', 'bestas leves']
-        self.pericias['arcanismo'] += self.bonus_proef
-        self.pericias['historia'] += self.bonus_proef
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
+        self.proef_itens = [ 'adagas', 'dardos', 'fundas', 'bastões', 'bestas leves']
+        self.proef_pericias = ['arcanismo', 'historia']
         self.inventario = {
             'grimório': 1,
             'bolsa de componentes': 1,
@@ -209,10 +179,8 @@ class Paladino(Classes):
         super().__init__(nome, habilidades)
         self.niveis()
         self.vida = 10 + self.habilidades.modificadores['constituicao']
-        self.proef = ['todas as armaduras' , 'escudos', 'armas simples', 'armas marciais' ]
-        self.pericias['intuicao'] += self.bonus_proef
-        self.pericias['medicina'] += self.bonus_proef
-        self.percepcao_passiva = 10 + self.pericias['percepcao']
+        self.proef_itens = ['todas as armaduras' , 'escudos', 'armas simples', 'armas marciais' ]
+        self.proef_pericias = ['intuicao', 'medicina']
         self.inventario = {
             'espada longa': 1,
             'escudo': 1,

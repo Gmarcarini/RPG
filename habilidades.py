@@ -61,3 +61,50 @@ class Habilidades:
                 self.modificadores[nome] = +10
             else:
                 self.modificadores[nome] = 0
+
+class Pericias:
+    def __init__(self, bonus_proef, proef, habilidades):
+        self.bonus_proef = bonus_proef
+        self.proef = proef
+        self.acrobacia = habilidades.modificadores['destreza']
+        self.adestrar = habilidades.modificadores['sabedoria']
+        self.arcanismo = habilidades.modificadores['inteligencia']
+        self.atletismo = habilidades.modificadores['forca']
+        self.atuacao = habilidades.modificadores['carisma']
+        self.enganacao = habilidades.modificadores['carisma']
+        self.furtividade = habilidades.modificadores['destreza']
+        self.historia = habilidades.modificadores['inteligencia']
+        self.intimidacao = habilidades.modificadores['carisma']
+        self.intuicao = habilidades.modificadores['sabedoria']
+        self.investigacao = habilidades.modificadores['inteligencia']
+        self.medicina = habilidades.modificadores['sabedoria']
+        self.natureza = habilidades.modificadores['inteligencia']
+        self.percepcao = habilidades.modificadores['sabedoria']
+        self.persuasao = habilidades.modificadores['carisma']
+        self.pretidigitacao = habilidades.modificadores['destreza']
+        self.religiao = habilidades.modificadores['inteligencia']
+        self.sobrevivencia = habilidades.modificadores['sabedoria']
+        self.proeficiencia()
+
+    def proeficiencia(self):
+        # Percorre a lista de perícias com proficiência e aplica o bônus de nível
+        for proeficiencia in self.proef:
+            if hasattr(self, proeficiencia):
+                setattr(self, proeficiencia, getattr(self, proeficiencia) + self.bonus_proef)
+
+    def __str__(self):
+        atributos = [
+            "acrobacia", "adestrar", "arcanismo", "atletismo", "atuacao",
+            "enganacao", "furtividade", "historia", "intimidacao", "intuicao",
+            "investigacao", "medicina", "natureza", "percepcao", "persuasao",
+            "pretidigitacao", "religiao", "sobrevivencia"
+        ]
+        resultado = []
+        for atributo in atributos:
+            valor_base = getattr(self, atributo) - (self.bonus_proef if atributo in self.proef else 0)
+            valor_final = getattr(self, atributo)
+            if atributo in self.proef:
+                resultado.append(f"{atributo.capitalize()} (proeficiente): {valor_base} + {self.bonus_proef}")
+            else:
+                resultado.append(f"{atributo.capitalize()}: {valor_final}")
+        return "\n".join(resultado)
