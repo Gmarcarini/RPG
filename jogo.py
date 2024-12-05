@@ -1,12 +1,9 @@
 from mestre import Mestre
 from jogador import borin, elara, pipkin, zaltarian, kael
+from NPCs import grimbeard, baruk, bruhilda, sir_reginald
 import time
 import os
 import keyboard
-
-
-mestre = Mestre()
-
 
 def selecao_personagem():
     "Menu de escolha dos personagens do jogo"
@@ -130,55 +127,7 @@ def enviar_ficha(numero_personagem):
     elif numero_personagem == 4:
         personagem == kael
     
-    mestre.mensagem(f'Ficha do personagem:\n{ficha(personagem)}')
-
-def ficha(personagem):
-    info = f'Nome: {personagem.nome}\n'
-    info +=  f'Classe Nível: {personagem.classe.nome} {personagem.classe.nivel}\n'
-    info +=  f'Antecendente: {personagem.antecedente}\n'
-    info +=  f'Raça: {personagem.raca.nome}\n'
-    info +=  f'Tendencia: {personagem.tendencia}\n'
-    info +=  f'Ponrtos de Experiencia: {personagem.classe.experiencia}\n'
-    info +=  f'\nHabilidades:\n'
-    info +=  f'Força: {personagem.habilidades.forca}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['forca']}\n'
-    info +=  f'Destreza: {personagem.habilidades.destreza}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['destreza']}\n'
-    info +=  f'Constituição: {personagem.habilidades.constituicao}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['constituicao']}\n'
-    info +=  f'Inteligencia: {personagem.habilidades.inteligencia}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['inteligencia']}\n'
-    info +=  f'Sabedoria: {personagem.habilidades.sabedoria}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['sabedoria']}\n'
-    info +=  f'Carisma: {personagem.habilidades.carisma}\n'
-    info +=  f'Modificador: {personagem.habilidades.modificadores['carisma']}\n'
-    info +=  f'Percepção Passiva: {personagem.percepcao_passiva}\n'
-    info +=  f'Bônus de proeficiencia: {personagem.bonus_proef}\n'
-    info +=  f'\nPerícias:\n'
-    for chave,valor in personagem.pericias.items():
-        info +=  f'{chave}: {valor}\n'
-    info +=  f'CA: {personagem.armadura}\n'
-    info +=  f'Deslocamento: {personagem.deslocamento}\n'
-    info += f'Vida: {personagem.vida}\n'
-    info +=  f'\nInventário:\n'
-    for chave, valor in personagem.inventario.items():
-        info +=  f'{chave}: {valor}\n'
-    info += f'Aliados:{personagem.aliados}\n'
-    info += f'Caracteristicas{personagem.caracteristicas}\n'
-
-inicializando()
-escolha = menu()
-
-if escolha == 0:
-    escolha = selecao_personagem()
-    enviar_ficha(escolha)
-
-elif escolha == 1:
-    creditos()
-
-elif escolha == 2:
-    print('Até mais jogador!')
-    exit
+    mestre.mensagem(f'Ficha do personagem do jogador:\n{personagem}')
 
 
 def combate(jogador, inimigo):
@@ -213,3 +162,29 @@ def combate(jogador, inimigo):
         else:
             #enviar para o mestre que o jogador nao fez nada
             pass
+
+        
+def dados(jogador):
+    jogador.rolagens
+
+mestre = Mestre()
+npcs = f'{grimbeard}'
+npcs += f'{baruk}'
+npcs += f'{bruhilda}'
+npcs += f'{sir_reginald}'
+mestre.mensagem(f'Aqui estão os NPCs Fixos do jogo, todos estão presentes dentro da Guilda do Machado Enferrujado\n{npcs}')
+
+#Iniando o jogo
+inicializando()
+escolha = menu()
+
+if escolha == 0:
+    escolha = selecao_personagem()
+    enviar_ficha(escolha)
+
+elif escolha == 1:
+    creditos()
+
+elif escolha == 2:
+    print('Até mais jogador!')
+    exit

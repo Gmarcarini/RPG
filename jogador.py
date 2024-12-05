@@ -28,7 +28,8 @@ class Personagem:
         self.caracteristicas = caracteristicas
         self.tesouro = tesouro
         self.inventario = {**self.classe.inventario, **inventario}
-    def Rolagens(self):
+
+    def rolagens(self):
         dados = f'Força: ({random.randint(1,20)}) + ({self.habilidades.modificadores['forca']})'
         dados += f'Destreza: {random.randint(1,20) + self.habilidades.modificadores['destreza']}'
         dados += f'Constituicao: {random.randint(1,20) + self.habilidades.modificadores['constituicao']}'
@@ -40,6 +41,52 @@ class Personagem:
     def atr_pericias(self):
         self.pericias = Pericias(self.bonus_proef, self.proef_pericias, self.habilidades)
 
+    def __str__(self):
+        ficha = (
+            f"=== Ficha do Personagem ===\n"
+            f"Nome: {self.nome}\n"
+            f"Classe: {self.classe.nome} (Nível {self.nivel})\n"
+            f"Raça: {self.raca.nome}\n"
+            f"Antecedente: {self.antecedente}\n"
+            f"Tendência: {self.tendencia}\n"
+            f"Armadura: {self.armadura}\n"
+            f"Vida: {self.vida}\n"
+            f"Deslocamento: {self.deslocamento} m\n"
+            f"Percepção Passiva: {self.percepcao_passiva}\n"
+            f"Idiomas: {', '.join(self.idiomas)}\n"
+            f"Proeficiências: {', '.join(self.proeficiencias)}\n"
+            f"Altura: {self.altura}\n"
+            f"Peso: {self.peso} kg\n"
+            f"Aliados: {', '.join(self.aliados) if self.aliados else 'Nenhum'}\n"
+            f"Características e Traços: {self.caracteristicas}\n"
+            f"Tesouro: {self.tesouro}\n"
+        )
+
+        habilidades = "\n".join(
+            f"  {atributo.capitalize()}: {getattr(self.habilidades, atributo)}"
+            for atributo in dir(self.habilidades)
+            if not atributo.startswith("_") and not callable(getattr(self.habilidades, atributo))
+        )
+
+        # Processa perícias
+        pericias = "\n".join(
+            f"  {pericia.capitalize()}: {'(proficiente)' if pericia in self.proef_pericias else ''} {getattr(self.pericias, pericia)}"
+            for pericia in dir(self.pericias)
+            if not pericia.startswith("_") and not callable(getattr(self.pericias, pericia))
+        )
+
+        # Processa inventário
+        equipamentos = "\n".join(
+            f"  - {item}: {quantidade}" for item, quantidade in self.inventario.items()
+        )
+
+        ficha += (
+            f"=== Habilidades ===\n{habilidades}\n"
+            f"=== Perícias ===\n{pericias}\n"
+            f"=== Equipamentos ===\n{equipamentos}\n"
+        )
+
+        return ficha
 
 borin = Personagem('Borin Pedra-Rachada', anao_montanha, 'forasteiro', 'Caótico bom', {'Clã Pedra-Rachada': 'exilado', 'Liga dos Exploradores da Montanha Rochosa': 'iniciante'}, ' Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.', 50, {'pequena pepita de ouro': 1, 'Cordao de dente de lobo': 1})
 
@@ -52,39 +99,4 @@ zaltarian = Personagem('Zaltarian Galdhar', tieflings, 'Sábio', 'Caótico Neutr
 kael = Personagem('Kael Brassscale', draconato, 'Soldado', 'Leal Bom', {'Legião da Aurora': 'exsoldado', 'Culto de Bahamut': 'participante'}, 'Kael é um paladino devoto e disciplinado, seguindo rigidamente os princípios de seu juramento. Ele é corajoso, leal e honrado, e sempre coloca o bem-estar dos outros acima do seu próprio. Ele é um pouco sério e reservado, mas também possui um senso de humor seco e sarcástico. Ele acredita que é seu dever proteger os fracos e os inocentes, e não hesita em usar a força para combater o mal. Justiça. "Eu defenderei os fracos e punirei os ímpios, sem exceção." (Leal)  "Eu devo lealdade aos meus companheiros de armas e honrarei a memória daqueles que tombaram em batalha." "Eu sou teimoso e orgulhoso, e às vezes me recuso a recuar, mesmo quando a situação exige."', 50, {'insígnia da Legião da Aurora': 1, 'livro pequeno de orações com a capa de couro': 1, 'kit de primeiros socorros': 1})
 
 personagem = Personagem('Borin Pedra-Rachada', anao_montanha, 'forasteiro', 'Caótico bom', {'Clã Pedra-Rachada': 'exilado', 'Liga dos Exploradores da Montanha Rochosa': 'iniciante'}, ' Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. "Ninguém me diz o que fazer. A montanha é meu único mestre." Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.', 50, {'pequena pepita de ouro': 1, 'Cordao de dente de lobo': 1})
-
-#Ficha barbaro
-#print('Ficha Borin Pedra-Rachada')
-info = f'Nome: {personagem.nome}\n'
-info +=  f'Classe Nível: {personagem.classe.nome} {personagem.classe.nivel}\n'
-info +=  f'Antecendente: {personagem.antecedente}\n'
-info +=  f'Raça: {personagem.raca.nome}\n'
-info +=  f'Tendencia: {personagem.tendencia}\n'
-info +=  f'Ponrtos de Experiencia: {personagem.classe.experiencia}\n'
-info +=  f'\nHabilidades:\n'
-info +=  f'Força: {personagem.habilidades.forca}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['forca']}\n'
-info +=  f'Destreza: {personagem.habilidades.destreza}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['destreza']}\n'
-info +=  f'Constituição: {personagem.habilidades.constituicao}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['constituicao']}\n'
-info +=  f'Inteligencia: {personagem.habilidades.inteligencia}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['inteligencia']}\n'
-info +=  f'Sabedoria: {personagem.habilidades.sabedoria}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['sabedoria']}\n'
-info +=  f'Carisma: {personagem.habilidades.carisma}\n'
-info +=  f'Modificador: {personagem.habilidades.modificadores['carisma']}\n'
-info +=  f'Percepção Passiva: {personagem.percepcao_passiva}\n'
-info +=  f'Bônus de proeficiencia: {personagem.bonus_proef}\n'
-info +=  f'\nPerícias:\n'
-info +=  f'{personagem.pericias}'
-info +=  f'CA: {personagem.armadura}\n'
-info +=  f'Deslocamento: {personagem.deslocamento}\n'
-info += f'Vida: {personagem.vida}\n'
-info +=  f'\nInventário:\n'
-for chave, valor in personagem.inventario.items():
-    info +=  f'{chave}: {valor}\n'
-info += f'Aliados:{personagem.aliados}\n'
-info += f'Caracteristicas{personagem.caracteristicas}\n'
-print(info)
 

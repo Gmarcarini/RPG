@@ -10,6 +10,9 @@ class Classes:
         self.inventario = {}
         self.CA = 0
 
+    def especial(self):
+        pass
+
     def niveis(self):
         if self.experiencia >= 0 and self.experiencia < 300:
             self.nivel = 1
@@ -71,6 +74,15 @@ class Classes:
         elif self.experiencia >= 355000:
             self.nivel = 20
             self.bonus_proef = 6
+
+class Plebeu(Classes):
+    def __init__(self, nome, habilidades):
+        super().__init__(nome, habilidades)
+        self.vida = 10 + self.habilidades.modificadores['constituicao']
+        self.proef_pericias = ['intuicao', 'persuasao']
+        self.inventario = {}
+        self.proef_itens = []
+        self.CA = 10
 
 class Barbaro(Classes):
     def __init__(self, nome, habilidades):
@@ -211,5 +223,17 @@ mago = Mago('Mago', hab_mago)
 
 hab_paladino = Habilidades(15, 12, 13, 10, 8 ,14)
 paladino = Paladino('Paladino', hab_paladino)
+
+hab_plebeu1 = Habilidades(12, 14, 15, 10, 16, 13)
+plebeu1 = Plebeu('Pebleu', hab_plebeu1)
+
+hab_pebleu2 = Habilidades(13, 8, 15, 7, 9, 10)
+plebeu2 = Plebeu('Pebleu', hab_pebleu2)
+
+hab_ajudante = Habilidades(16, 14, 14, 10, 11, 8)
+ajudante = Barbaro('Barbaro', hab_ajudante)
+
+hab_paladino2 = Habilidades(18, 10, 16, 13, 12, 17)
+paladino2 = Paladino('Paladino', hab_paladino2)
 
 print(bardo.bonus_proef)

@@ -1,5 +1,5 @@
 import random
-from classes import barbaro, bardo, mago, ladino, paladino
+from classes import barbaro, bardo, mago, ladino, paladino, plebeu1, plebeu2, ajudante, paladino2
 
 class AnaoMontanha:
     def __init__(self, classe):
@@ -30,7 +30,6 @@ class AnaoColina:
         self.habilidades = classe.habilidades
         self.habilidades.constituicao += 2
         self.habilidades.sabedoria += 1
-        self.vida += 1
         self.proef = ['machados de batalha', 'machadinhas', 'martelos leves', 'martelos de guerra']
         self.deslocamento = 7.5
         self.caract_raca = {
@@ -144,8 +143,8 @@ class Humano:
         self.nome = 'Humano'
         d10 = [random.randint(1,10) for i in (range(5))]
         d4 = [random.randint(1,4) for i in (range(1))]
-        self.altura = 1.42 + sum(10)
-        self.peso = 55 + (sum(10) * sum(d4) / 5)
+        self.altura = 1.42 + sum(d10)
+        self.peso = 55 + (sum(d10) * sum(d4) / 5)
         self.idiomas = ['comum']
         self.habilidades = classe.habilidades
         self.habilidades.forca += 1
@@ -285,3 +284,7 @@ meio_elfo = MeioElfo(bardo)
 gnomo_floresta = GnomoFloresta(ladino)
 tieflings = Tieflings(mago)
 draconato = Draconato(paladino)
+dono_bar = AnaoColina(plebeu1)
+bebado = MeioOrc(plebeu2)
+ajudante = Humano(ajudante)
+reginald = Humano(paladino2)
