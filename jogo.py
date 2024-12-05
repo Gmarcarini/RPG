@@ -158,8 +158,11 @@ def game_loop(jogador):
     print(narracao.text)
     while True:
         acao = input(f'{jogador.nome}: ')
+        if acao == 'Usar Especial':
+            narracao = chat_session.send_message(f'{jogador.classe.especial()}')
         narracao = chat_session.send_message(f'Ação do jogador: {acao}')
         print(narracao.text)
+
     
 
 #Criando arquivo dos NPCs

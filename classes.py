@@ -105,17 +105,7 @@ class Barbaro(Classes):
 
 
     def especial(self):
-        #furia
-        self.vida_anterior = self.vida
-        self.forca_anterior = self.habilidades.forca
-        self.vida += 3*self.nivel
-        self.habilidades.forca += self.nivel
-        self.habilidades.bonus()
-
-    def desf_furia(self):
-        self.vida = self.vida_anterior
-        self.habilidades.forca = self.forca_anterior
-        self.habilidades.bonus()
+        return f'O jogador entra em furia aumentando sua vida e sua força por 10 turnos'
 
     
 
