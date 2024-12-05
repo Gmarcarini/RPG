@@ -41,6 +41,44 @@ class Personagem:
     def atr_pericias(self):
         self.pericias = Pericias(self.bonus_proef, self.proef_pericias, self.habilidades)
 
+    def to_dict(self):
+        """Converte o objeto em um dicionário com base no formato de __str__."""
+        return {
+            "nome": self.nome,
+            "classe": {
+                "nome": self.classe.nome,
+                "nivel": self.nivel
+            },
+            "raca": self.raca.nome,
+            "antecedente": self.antecedente,
+            "tendencia": self.tendencia,
+            "armadura": self.armadura,
+            "vida": self.vida,
+            "deslocamento": self.deslocamento,
+            "percepcao_passiva": self.percepcao_passiva,
+            "idiomas": self.idiomas,
+            "proeficiencias": self.proeficiencias,
+            "altura": self.altura,
+            "peso": self.peso,
+            "aliados": self.aliados if self.aliados else [],
+            "caracteristicas": self.caracteristicas,
+            "tesouro": self.tesouro,
+            "habilidades": {
+                atributo: getattr(self.habilidades, atributo)
+                for atributo in dir(self.habilidades)
+                if not atributo.startswith("_") and not callable(getattr(self.habilidades, atributo))
+            },
+            "pericias": {
+                pericia: {
+                    "valor": getattr(self.pericias, pericia),
+                    "proficiente": pericia in self.proef_pericias
+                }
+                for pericia in dir(self.pericias)
+                if not pericia.startswith("_") and not callable(getattr(self.pericias, pericia))
+            },
+            "inventario": self.inventario
+        }
+
     def __str__(self):
         ficha = (
             f"=== Ficha do Personagem ===\n"

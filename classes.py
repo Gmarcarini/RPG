@@ -235,5 +235,3 @@ ajudante = Barbaro('Barbaro', hab_ajudante)
 
 hab_paladino2 = Habilidades(18, 10, 16, 13, 12, 17)
 paladino2 = Paladino('Paladino', hab_paladino2)
-
-print(bardo.bonus_proef)

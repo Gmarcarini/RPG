@@ -1,0 +1,142 @@
+{
+    "nome": "Borin Pedra-Rachada",
+    "classe": {
+        "nome": "Barbaro",
+        "nivel": 1
+    },
+    "raca": "Anao da Montanha",
+    "antecedente": "forasteiro",
+    "tendencia": "Caótico bom",
+    "armadura": 13,
+    "vida": 14,
+    "deslocamento": 7.5,
+    "percepcao_passiva": 11,
+    "idiomas": [
+        "comum",
+        "anao"
+    ],
+    "proeficiencias": [
+        "armaduras leves",
+        "armaduras medias",
+        "escudos",
+        "armas simples",
+        "armas marciais"
+    ],
+    "altura": 15.22,
+    "peso": 67.8,
+    "aliados": {
+        "Clã Pedra-Rachada": "exilado",
+        "Liga dos Exploradores da Montanha Rochosa": "iniciante"
+    },
+    "caracteristicas": " Impulsivo, corajoso até a beira da imprudência, leal aos seus amigos, desconfiado de estranhos (especialmente elfos), tem um fraco por crianças e animais indefesos.  Liberdade. \"Ninguém me diz o que fazer. A montanha é meu único mestre.\" Eu devo vingança ao gigante do gelo que matou meu irmão e roubou o totem do meu clã. Eu tenho um pavio curto e me irrito com facilidade, especialmente quando alguém questiona minha coragem ou zomba da minha altura.",
+    "tesouro": 50,
+    "habilidades": {
+        "carisma": 10,
+        "constituicao": 16,
+        "destreza": 13,
+        "forca": 17,
+        "inteligencia": 8,
+        "modificadores": {
+            "forca": 2,
+            "destreza": 1,
+            "constituicao": 2,
+            "inteligencia": -1,
+            "sabedoria": 1,
+            "carisma": 0
+        },
+        "sabedoria": 12
+    },
+    "pericias": {
+        "acrobacia": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "adestrar": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "arcanismo": {
+            "valor": -1,
+            "proficiente": false
+        },
+        "atletismo": {
+            "valor": 4,
+            "proficiente": true
+        },
+        "atuacao": {
+            "valor": 0,
+            "proficiente": false
+        },
+        "bonus_proef": {
+            "valor": 2,
+            "proficiente": false
+        },
+        "enganacao": {
+            "valor": 0,
+            "proficiente": false
+        },
+        "furtividade": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "historia": {
+            "valor": -1,
+            "proficiente": false
+        },
+        "intimidacao": {
+            "valor": 2,
+            "proficiente": true
+        },
+        "intuicao": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "investigacao": {
+            "valor": -1,
+            "proficiente": false
+        },
+        "medicina": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "natureza": {
+            "valor": -1,
+            "proficiente": false
+        },
+        "percepcao": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "persuasao": {
+            "valor": 0,
+            "proficiente": false
+        },
+        "pretidigitacao": {
+            "valor": 1,
+            "proficiente": false
+        },
+        "proef": {
+            "valor": [
+                "atletismo",
+                "intimidacao"
+            ],
+            "proficiente": false
+        },
+        "religiao": {
+            "valor": -1,
+            "proficiente": false
+        },
+        "sobrevivencia": {
+            "valor": 1,
+            "proficiente": false
+        }
+    },
+    "inventario": {
+        "machado grande": 1,
+        "machadinha": 2,
+        "pacote de aventureiro": 1,
+        "azagaia": 4,
+        "pequena pepita de ouro": 1,
+        "Cordao de dente de lobo": 1
+    }
+}
