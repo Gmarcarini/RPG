@@ -1,0 +1,73 @@
+{
+    "nome": "Baruk",
+    "raca": "Meio Orc",
+    "classe": "Pebleu",
+    "tendencia": "Caótico Neutro",
+    "ocupacao": "Bêbado",
+    "CA": 10,
+    "vida": 12,
+    "deslocamento": 9,
+    "bonus_proeficiencia": 0,
+    "idiomas": [
+        "comum",
+        "orc"
+    ],
+    "aparencia": "Baruk é um meio-orc desgrenhado e sujo, com roupas rasgadas e manchadas de bebida. Seus olhos injetados de sangue vagueiam sem foco, e seu hálito carrega o forte odor de cerveja azeda. Ele tem uma barba rala e desgrenhada, e sua pele esverdeada está coberta de cicatrizes e arranhões.",
+    "caracteristicas_tracos": "Baruk é um bêbado rabugento e imprevisível, sempre pronto para uma briga ou uma discussão sem sentido. Ele é um mentiroso compulsivo e um ladrão oportunista, e não hesita em enganar ou roubar aqueles ao seu redor (incluindo seus \"amigos\"). Apesar de sua natureza desagradável, ele possui um estranho carisma, e muitas vezes consegue convencer os outros a lhe dar dinheiro ou bebida. Ele tem um medo irracional de água e se recusa a tomar banho.",
+    "motivacao": "Nenhum. Baruk se importa apenas consigo mesmo e com sua próxima bebida.",
+    "adicionais": "Baruk já foi um guerreiro respeitado em sua tribo, mas seu vício em bebida o levou à ruína. Ele foi expulso de sua tribo e agora vive como um mendigo nas ruas da cidade, passando seus dias na taverna \"Machado Enferrujado\", onde ele tenta conseguir bebida de graça ou dinheiro para comprar mais. Ele se lembra vagamente de sua antiga vida, mas prefere esquecer seu passado vergonhoso.",
+    "tesouro": 1,
+    "habilidades": {
+        "carisma": 10,
+        "constituicao": 16,
+        "destreza": 8,
+        "forca": 15,
+        "inteligencia": 7,
+        "modificadores": {
+            "forca": 1,
+            "destreza": -1,
+            "constituicao": 2,
+            "inteligencia": -2,
+            "sabedoria": -1,
+            "carisma": 0
+        },
+        "sabedoria": 9
+    },
+    "pericias": {
+        "carisma": {
+            "valor": 10,
+            "proficiente": false
+        },
+        "constituicao": {
+            "valor": 16,
+            "proficiente": false
+        },
+        "destreza": {
+            "valor": 8,
+            "proficiente": false
+        },
+        "forca": {
+            "valor": 15,
+            "proficiente": false
+        },
+        "inteligencia": {
+            "valor": 7,
+            "proficiente": false
+        },
+        "modificadores": {
+            "valor": {
+                "forca": 1,
+                "destreza": -1,
+                "constituicao": 2,
+                "inteligencia": -2,
+                "sabedoria": -1,
+                "carisma": 0
+            },
+            "proficiente": false
+        },
+        "sabedoria": {
+            "valor": 9,
+            "proficiente": false
+        }
+    }
+}

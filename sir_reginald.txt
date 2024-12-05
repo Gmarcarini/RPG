@@ -1,0 +1,72 @@
+{
+    "nome": "Sir Reginald",
+    "raca": "Humano",
+    "classe": "Paladino",
+    "tendencia": "Leal Bom",
+    "ocupacao": "Cavaleiro Errante",
+    "CA": 18,
+    "vida": 13,
+    "deslocamento": 9,
+    "bonus_proeficiencia": 2,
+    "idiomas": [
+        "comum"
+    ],
+    "aparencia": "Sir Reginald é um homem imenso, com uma armadura de placas branca reluzente e detalhes em dourado. Sua presença impõe respeito, mesmo quando ele está realizando tarefas mundanas, como polir sua escada gigante (que ele carrega em suas costas, presa por um sistema de tiras e fivelas).",
+    "caracteristicas_tracos": "Sir Reginald é um cavaleiro devoto e honrado, seguindo rigidamente os princípios de seu juramento. Ele é educado e cortês com todos, mesmo com seus inimigos. No entanto, sua obsessão pela limpeza e ordem pode beirar o patológico. Ele passa horas polindo sua armadura, escudo e escada (que, na sua opinião, é uma ferramenta essencial para um cavaleiro), mesmo que eles já estejam impecavelmente limpos.",
+    "motivacao": "Ordem. \"Tudo tem seu lugar e seu propósito. O caos é o inimigo da civilização.\" (Leal)",
+    "adicionais": "Sir Reginald nasceu em uma família nobre e foi treinado desde cedo para ser um cavaleiro. Ele sempre foi um perfeccionista, e essa característica se intensificou após ele fazer seu juramento de paladino. Ele acredita que a limpeza e a ordem são reflexos da pureza da alma, e se esforça para manter tudo ao seu redor impecável. Ele viaja pelo mundo como um cavaleiro errante, buscando ajudar os necessitados e combater o mal, mas sempre encontra tempo para polir sua armadura, seu escudo e, claro, sua escada gigante.",
+    "tesouro": 100,
+    "habilidades": {
+        "carisma": 18,
+        "constituicao": 17,
+        "destreza": 11,
+        "forca": 19,
+        "inteligencia": 14,
+        "modificadores": {
+            "forca": 4,
+            "destreza": 0,
+            "constituicao": 3,
+            "inteligencia": 1,
+            "sabedoria": 1,
+            "carisma": 3
+        },
+        "sabedoria": 13
+    },
+    "pericias": {
+        "carisma": {
+            "valor": 18,
+            "proficiente": false
+        },
+        "constituicao": {
+            "valor": 17,
+            "proficiente": false
+        },
+        "destreza": {
+            "valor": 11,
+            "proficiente": false
+        },
+        "forca": {
+            "valor": 19,
+            "proficiente": false
+        },
+        "inteligencia": {
+            "valor": 14,
+            "proficiente": false
+        },
+        "modificadores": {
+            "valor": {
+                "forca": 4,
+                "destreza": 0,
+                "constituicao": 3,
+                "inteligencia": 1,
+                "sabedoria": 1,
+                "carisma": 3
+            },
+            "proficiente": false
+        },
+        "sabedoria": {
+            "valor": 13,
+            "proficiente": false
+        }
+    }
+}

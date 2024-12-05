@@ -24,6 +24,39 @@ class NPCs(Personagem):
         self.adicionais = adicionais
         self.tesouro = tesouro
 
+    def to_dict(self):
+        """Converte o objeto NPC em um dicionário."""
+        return {
+            "nome": self.nome,
+            "raca": self.raca,
+            "classe": self.classe,
+            "tendencia": self.tendencia,
+            "ocupacao": self.ocupacao,
+            "CA": self.CA,
+            "vida": self.vida,
+            "deslocamento": self.deslocamento,
+            "bonus_proeficiencia": self.bonus_proef,
+            "idiomas": self.idiomas,
+            "aparencia": self.aparencia,
+            "caracteristicas_tracos": self.caracteristicas_tracos,
+            "motivacao": self.motivacao,
+            "adicionais": self.adicionais,
+            "tesouro": self.tesouro,
+            "habilidades": {
+                atributo: getattr(self.habilidades, atributo)
+                for atributo in dir(self.habilidades)
+                if not atributo.startswith("_") and not callable(getattr(self.habilidades, atributo))
+            },
+            "pericias": {
+                pericia: {
+                    "valor": getattr(self.habilidades, pericia),
+                    "proficiente": pericia in self.proef_pericias
+                }
+                for pericia in dir(self.habilidades)
+                if not pericia.startswith("_") and not callable(getattr(self.habilidades, pericia))
+            }
+        }
+
     def __str__(self):
         ficha = (
             f"=== Ficha de NPC ===\n"

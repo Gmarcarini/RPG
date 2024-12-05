@@ -51,6 +51,10 @@ model = genai.GenerativeModel(
 # You may need to update the file paths
 files = [
   upload_to_gemini("personagem.txt", mime_type="text/plain"),
+  upload_to_gemini("baruk.txt", mime_type="text/plain"),
+  upload_to_gemini("bruhilda.txt", mime_type="text/plain"),
+  upload_to_gemini("sir_reginald.txt", mime_type="text/plain"),
+  upload_to_gemini("grimbeard.txt", mime_type="text/plain")
 ]
 
 # Some files have a processing delay. Wait for them to be ready.
@@ -61,8 +65,21 @@ chat_session = model.start_chat(
     {
       "role": "user",
       "parts": [
-        files[0],
+        "Aqui estão os NPCs Fixos do jogo, todos estão presentes dentro da Guilda do Machado Enferrujado",
+        files[1],
+        files[2],
+        files[3],
+        files[4],
       ],
     },
+    {
+      "role": "user",
+      "parts": [
+        files[0],
+
+      ],
+    },
+    
   ]
 )
+

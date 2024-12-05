@@ -1,0 +1,72 @@
+{
+    "nome": "Bruhilda Stormblade",
+    "raca": "Humano",
+    "classe": "Barbaro",
+    "tendencia": "Caótico Neutro",
+    "ocupacao": "Ajudante da Guilda  de Aventureiros no Machado Enferrujado",
+    "CA": 14,
+    "vida": 14,
+    "deslocamento": 9,
+    "bonus_proeficiencia": 2,
+    "idiomas": [
+        "comum"
+    ],
+    "aparencia": "Brunhilda é uma mulher musculosa e imponente, com uma cicatriz marcante no olho direito. Ela mantém uma expressão carrancuda e fala pouco, preferindo se comunicar com grunhidos e gestos bruscos. Suas roupas são simples e práticas, projetadas para o combate, e ela raramente é vista sem seus dois machados de guerra.",
+    "caracteristicas_tracos": "Brunhilda é conhecida por sua atitude rude e agressiva. Ela não  tem paciência para conversa fiada ou gentilezas, e não hesita em usar a força para resolver seus problemas. Apesar de sua natureza bruta, ela possui um forte senso de justiça e lealdade à guilda, e sempre cumpre seus contratos. Ela tem um fraco por animais, especialmente cachorros de guerra, e secretamente sonha em ter seu próprio canil.",
+    "motivacao": "\"Eu nunca deixarei que alguém machuque meus amigos da guilda.\"",
+    "adicionais": "Brunhilda cresceu em uma família pobre e aprendeu a lutar desde cedo para sobreviver. Ela se juntou à guilda de aventureiros para ganhar a vida e provar seu valor, e rapidamente se destacou por sua força e habilidade com os machados. A cicatriz em seu olho é uma lembrança de um combate particularmente brutal contra um grupo de orcs, o que a deixou ainda mais desconfiada e agressiva.",
+    "tesouro": 15,
+    "habilidades": {
+        "carisma": 9,
+        "constituicao": 15,
+        "destreza": 15,
+        "forca": 17,
+        "inteligencia": 11,
+        "modificadores": {
+            "forca": 3,
+            "destreza": 2,
+            "constituicao": 2,
+            "inteligencia": 0,
+            "sabedoria": 0,
+            "carisma": -1
+        },
+        "sabedoria": 12
+    },
+    "pericias": {
+        "carisma": {
+            "valor": 9,
+            "proficiente": false
+        },
+        "constituicao": {
+            "valor": 15,
+            "proficiente": false
+        },
+        "destreza": {
+            "valor": 15,
+            "proficiente": false
+        },
+        "forca": {
+            "valor": 17,
+            "proficiente": false
+        },
+        "inteligencia": {
+            "valor": 11,
+            "proficiente": false
+        },
+        "modificadores": {
+            "valor": {
+                "forca": 3,
+                "destreza": 2,
+                "constituicao": 2,
+                "inteligencia": 0,
+                "sabedoria": 0,
+                "carisma": -1
+            },
+            "proficiente": false
+        },
+        "sabedoria": {
+            "valor": 12,
+            "proficiente": false
+        }
+    }
+}

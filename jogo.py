@@ -109,7 +109,7 @@ def selecao_personagem():
             return current_option
 
 
-def enviar_ficha(numero_personagem):
+def enviar_fichas(numero_personagem):
     if numero_personagem == 0:
         personagem = borin
     elif numero_personagem == 1:
@@ -127,28 +127,63 @@ def enviar_ficha(numero_personagem):
     with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
         arquivo.write(dados_formatados)
 
-
 def creditos():
-    print('Esse jogo foi produzido por:')
+    clear_console()
+    print("""
+░█████╗░██████╗░██╗░░░██╗███████╗███╗░░██╗████████╗██╗░░░██╗██████╗░███████╗  ░█████╗░███████╗
+██╔══██╗██╔══██╗██║░░░██║██╔════╝████╗░██║╚══██╔══╝██║░░░██║██╔══██╗██╔════╝  ██╔══██╗██╔════╝
+███████║██║░░██║╚██╗░██╔╝█████╗░░██╔██╗██║░░░██║░░░██║░░░██║██████╔╝█████╗░░  ██║░░██║█████╗░░
+██╔══██║██║░░██║░╚████╔╝░██╔══╝░░██║╚████║░░░██║░░░██║░░░██║██╔══██╗██╔══╝░░  ██║░░██║██╔══╝░░
+██║░░██║██████╔╝░░╚██╔╝░░███████╗██║░╚███║░░░██║░░░╚██████╔╝██║░░██║███████╗  ╚█████╔╝██║░░░░░
+╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░░╚═════╝░╚═╝░░╚═╝╚══════╝  ░╚════╝░╚═╝░░░░░
+
+██████╗░██╗░░░██╗░██████╗████████╗██╗░░░██╗  ░█████╗░██╗░░██╗███████╗
+██╔══██╗██║░░░██║██╔════╝╚══██╔══╝╚██╗░██╔╝  ██╔══██╗╚██╗██╔╝██╔════╝
+██████╔╝██║░░░██║╚█████╗░░░░██║░░░░╚████╔╝░  ███████║░╚███╔╝░█████╗░░
+██╔══██╗██║░░░██║░╚═══██╗░░░██║░░░░░╚██╔╝░░  ██╔══██║░██╔██╗░██╔══╝░░
+██║░░██║╚██████╔╝██████╔╝░░░██║░░░░░░██║░░░  ██║░░██║██╔╝╚██╗███████╗
+╚═╝░░╚═╝░╚═════╝░╚═════╝░░░░╚═╝░░░░░░╚═╝░░░  ╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝\n""")
+    print('\nEsse jogo foi produzido por:')
     print('Giovanni Marcarini Silveira')
-    print('Desenvolvedor Principal e Diretor Criativo')
+    print('Desenvolvedor 1 e Diretor Criativo\n')
     print('Arthur Contri')
-    print('Modelador UML')
+    print('Desenvolvedor 2 e Modelagem\n')
     input('Pressione enter para voltar ao menu principal')
     menu()
     
-'''npcs = f'{grimbeard}'
-npcs += f'{baruk}'
-npcs += f'{bruhilda}'
-npcs += f'{sir_reginald}'
-mestre.mensagem(f'Aqui estão os NPCs Fixos do jogo, todos estão presentes dentro da Guilda do Machado Enferrujado\n{npcs}')'''
+
+#Criando arquivo dos NPCs
+dados = baruk.to_dict()
+dados_formatados = json.dumps(dados, ensure_ascii=False, indent=4)
+nome_arquivo = "baruk.txt"
+with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
+    arquivo.write(dados_formatados)
+
+dados = bruhilda.to_dict()
+dados_formatados = json.dumps(dados, ensure_ascii=False, indent=4)
+nome_arquivo = "bruhilda.txt"
+with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
+    arquivo.write(dados_formatados)
+
+dados = sir_reginald.to_dict()
+dados_formatados = json.dumps(dados, ensure_ascii=False, indent=4)
+nome_arquivo = "sir_reginald.txt"
+with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
+    arquivo.write(dados_formatados)
+    
+dados = grimbeard.to_dict()
+dados_formatados = json.dumps(dados, ensure_ascii=False, indent=4)
+nome_arquivo = "grimbeard.txt"
+with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
+    arquivo.write(dados_formatados)
+
 #Iniando o jogo
 inicializando()
 escolha = menu()
 
 if escolha == 0:
     escolha = selecao_personagem()
-    enviar_ficha(escolha)
+    enviar_fichas(escolha)
 
 elif escolha == 1:
     creditos()
@@ -157,6 +192,8 @@ elif escolha == 2:
     print('Até mais jogador!')
     exit
 
+
 from mestre import chat_session
-teste = chat_session.send_message('Após ler o arquivo me responde somente com a classe do personagem do arquivo')
+#AI AI QUE LEGAL AI AI QUE FENOMENAL AI AI SENSACIONAL A PIRIQUITA DELA NO MEU PAU
+teste = chat_session.send_message('Quais os nomes dos 4 npcs fixos do jogo?')
 print(teste.text)

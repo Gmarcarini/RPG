@@ -22,8 +22,8 @@
         "armas simples",
         "armas marciais"
     ],
-    "altura": 15.22,
-    "peso": 67.8,
+    "altura": 11.22,
+    "peso": 73.0,
     "aliados": {
         "Clã Pedra-Rachada": "exilado",
         "Liga dos Exploradores da Montanha Rochosa": "iniciante"

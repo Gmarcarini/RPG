@@ -1,0 +1,73 @@
+{
+    "nome": "Grimbeard Pedra-firme",
+    "raca": "Anao da Colina",
+    "classe": "Pebleu",
+    "tendencia": "Neutro Bom",
+    "ocupacao": "Dono da Taverna \"Machado Enferrujado\"",
+    "CA": 10,
+    "vida": 12,
+    "deslocamento": 7.5,
+    "bonus_proeficiencia": 0,
+    "idiomas": [
+        "comum",
+        "anao"
+    ],
+    "aparencia": "Grimbeard é um anão barrigudo, com uma barba longa e espessa que chega a seus joelhos, trançada com fios de cobre. Ele usa um avental manchado de cerveja sobre roupas simples e confortáveis. Seus olhos castanho-escuros brilham com astúcia e bom humor. Apesar de sua aparência jovial, ele tem uma presença imponente, e seus clientessabem que é melhor não se meter com ele.",
+    "caracteristicas_tracos": "Grimbeard é um anão acolhedor e jovial, sempre pronto para uma boa conversa e uma caneca de cerveja gelada. Ele é um fofoqueiro inveterado e parece saber de tudo o que acontece na cidade, desde os negócios escusos nos becos até os romances secretos da nobreza. Ele é um ótimo contador de histórias, mas costuma embelezar os fatos para torná-los mais interessantes. Ele está sempre disposto a trocar informações por um pouco de ouro, especialmente se a informação for escandalosa ou comprometedora. Apesar de seu bom humor, ele é um negociante astuto e não tolera trapaças em seu estabelecimento. Ele é profundamente leal à sua comunidade e aos seus amigos, e faria qualquer coisa para protegê-los.",
+    "motivacao": "Motivação: Manter sua taverna funcionando e próspera, ser um pilar da comunidade e, secretamente, juntar ouro suficiente para se aposentar em uma confortável casa nas montanhas.",
+    "adicionais": "Grimbeard possui um velho cão mastim chamado Barril, que costuma dormir perto da lareira da taverna. Ele tem uma coleção impressionante de canecas de cerveja, cada uma com uma história única. Grimbeard desconfia de aventureiros, pois eles costumam causar problemas e raramente pagam suas contas em dia. No entanto, ele os tolera, pois eles trazem boas histórias e, às vezes, até pagam suas dívidas.",
+    "tesouro": 250,
+    "habilidades": {
+        "carisma": 13,
+        "constituicao": 17,
+        "destreza": 14,
+        "forca": 12,
+        "inteligencia": 10,
+        "modificadores": {
+            "forca": 1,
+            "destreza": 2,
+            "constituicao": 2,
+            "inteligencia": 0,
+            "sabedoria": 3,
+            "carisma": 1
+        },
+        "sabedoria": 17
+    },
+    "pericias": {
+        "carisma": {
+            "valor": 13,
+            "proficiente": false
+        },
+        "constituicao": {
+            "valor": 17,
+            "proficiente": false
+        },
+        "destreza": {
+            "valor": 14,
+            "proficiente": false
+        },
+        "forca": {
+            "valor": 12,
+            "proficiente": false
+        },
+        "inteligencia": {
+            "valor": 10,
+            "proficiente": false
+        },
+        "modificadores": {
+            "valor": {
+                "forca": 1,
+                "destreza": 2,
+                "constituicao": 2,
+                "inteligencia": 0,
+                "sabedoria": 3,
+                "carisma": 1
+            },
+            "proficiente": false
+        },
+        "sabedoria": {
+            "valor": 17,
+            "proficiente": false
+        }
+    }
+}
