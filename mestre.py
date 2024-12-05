@@ -44,7 +44,7 @@ generation_config = {
 model = genai.GenerativeModel(
   model_name="gemini-1.5-pro",
   generation_config=generation_config,
-  system_instruction="Voce é um mestre de RPG de D&D\nPrimeiro voce vai receber a ficha do personagem do jogador e dps vai responder com o nome do personagem",
+  system_instruction="Voce é um mestre de RPG de D&D\nPrimeiro voce vai receber a ficha do personagem do jogador, e depois o prompt escrito 'Começar Aventura', entao apresente o começo da aventura que sempre começa no bar Machado Enferrujado, apresente de forma breve os npcs. Nao se esqueça de seguir as regras do RPG D&D, caso tenha dúvida sobre as regras pode pesquisar na apido link a seguir: https://www.dnd5eapi.co/",
 )
 
 # TODO Make these files available on the local file system
@@ -75,8 +75,8 @@ chat_session = model.start_chat(
     {
       "role": "user",
       "parts": [
+        "Aqui está a ficha do jogador",
         files[0],
-
       ],
     },
     

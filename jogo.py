@@ -126,6 +126,7 @@ def enviar_fichas(numero_personagem):
     nome_arquivo = "personagem.txt"
     with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
         arquivo.write(dados_formatados)
+    return personagem
 
 def creditos():
     clear_console()
@@ -150,6 +151,15 @@ def creditos():
     print('Desenvolvedor 2 e Modelagem\n')
     input('Pressione enter para voltar ao menu principal')
     menu()
+
+def game_loop(jogador):
+    clear_console()
+    narracao = chat_session.send_message('Começar Aventura')
+    print(narracao.text)
+    while True:
+        acao = input(f'{jogador.nome}: ')
+        narracao = chat_session.send_message(f'Ação do jogador: {acao}')
+        print(narracao.text)
     
 
 #Criando arquivo dos NPCs
@@ -183,7 +193,7 @@ escolha = menu()
 
 if escolha == 0:
     escolha = selecao_personagem()
-    enviar_fichas(escolha)
+    jogador = enviar_fichas(escolha)
 
 elif escolha == 1:
     creditos()
@@ -192,8 +202,6 @@ elif escolha == 2:
     print('Até mais jogador!')
     exit
 
-
+#Iniciamos o mestre após o personagem do jogador ser escolhido para começarmos ja com o upload dos arquivos para o mestre
 from mestre import chat_session
-#AI AI QUE LEGAL AI AI QUE FENOMENAL AI AI SENSACIONAL A PIRIQUITA DELA NO MEU PAU
-teste = chat_session.send_message('Quais os nomes dos 4 npcs fixos do jogo?')
-print(teste.text)
+game_loop(jogador)
